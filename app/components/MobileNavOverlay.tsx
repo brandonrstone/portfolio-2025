@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { BookOpenCheck, CircleUserRound, GalleryHorizontal, Home, X } from 'lucide-react'
+import { BookOpenCheck, ChartNoAxesGantt, CircleUserRound, CodeXml, Home, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
 type MobileNavOverlayProps = {
@@ -45,7 +45,7 @@ export const MobileNavOverlay = ({ isOpen, setIsOpen }: MobileNavOverlayProps) =
 
       {/* Sidebar */}
       <div className='relative w-3/4 max-w-sm h-full p-6 bg-foreground dark:bg-background text:background dark:text-foreground shadow-xl'>
-        <button className='absolute top-4 right-4 text-white hover:text-lavender transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
+        <button className='absolute top-4 right-4 text-background dark:text-foreground hover:text-lavender transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
           <X className='w-6 h-6 cursor-pointer' />
         </button>
 
@@ -54,7 +54,9 @@ export const MobileNavOverlay = ({ isOpen, setIsOpen }: MobileNavOverlayProps) =
           <NavItemDivider />
           <NavItem href='/about' onClick={() => setIsOpen(false)} icon={CircleUserRound} label='About Me' />
           <NavItemDivider />
-          <NavItem href='/portfolio' onClick={() => setIsOpen(false)} icon={GalleryHorizontal} label='Portfolio' />
+          <NavItem href='/experience' onClick={() => setIsOpen(false)} icon={ChartNoAxesGantt} label='Experience' />
+          <NavItemDivider />
+          <NavItem href='/portfolio' onClick={() => setIsOpen(false)} icon={CodeXml} label='Portfolio' />
           <NavItemDivider />
           <NavItem href='/contact' onClick={() => setIsOpen(false)} icon={BookOpenCheck} label='Contact' />
           <NavItemDivider />

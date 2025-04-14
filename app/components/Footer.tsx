@@ -1,31 +1,44 @@
+// components/Footer.tsx
+'use client'
+
 import Link from 'next/link'
-import { Facebook, Instagram, Twitter, Mail } from 'lucide-react'
+import { Instagram, Twitter, Youtube, Mail, MessageCircleMore, Send, TwitterIcon } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className='w-full border-t  text-foreground py-10'>
+    <footer className='w-full border-t py-10 text-muted-foreground'>
       <div className='max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6'>
+        {/* Branding */}
         <div className='text-center md:text-left'>
-          <h2 className='text-xl font-semibold'>Lavender Wings Tattoo</h2>
-          <p className='text-sm text-muted-foreground'>431 Main St, Machester, CT 06040</p>
-          <p className='text-sm text-muted-foreground'>Bringing your vision to life — one needle at a time.</p>
+          <h2 className='text-xl font-bold text-background dark:text-foreground'>Brandon Stone Dev</h2>
+          <p className='text-sm'>Building beautiful, functional web experiences.</p>
         </div>
-        <div className='flex gap-6 text-muted-foreground'>
-          <Link href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
-            <Facebook className='hover:text-lavender transition-colors duration-300 ease-in-out' />
-          </Link>
+
+        {/* Social Icons */}
+        <div className='flex gap-5 text-muted-foreground'>
           <Link href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
-            <Instagram className='hover:text-lavender transition-colors duration-300 ease-in-out' />
+            <Instagram className='hover:text-pink-500 transition-colors duration-300' />
           </Link>
-          <Link href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
-            <Twitter className='hover:text-lavender transition-colors duration-300 ease-in-out' />
+          <Link href='https://x.com' target='_blank' rel='noopener noreferrer'>
+            <Twitter className='hover:text-blue-500 transition-colors duration-300' />
+          </Link>
+          <Link href='https://youtube.com' target='_blank' rel='noopener noreferrer'>
+            <Youtube className='hover:text-red-500 transition-colors duration-300' />
+          </Link>
+          <Link href='https://discord.com' target='_blank' rel='noopener noreferrer'>
+            <MessageCircleMore className='hover:text-indigo-500 transition-colors duration-300' />
+          </Link>
+          <Link href='https://t.me/yourchannel' target='_blank' rel='noopener noreferrer'>
+            <Send className='hover:text-cyan-400 transition-colors duration-300' />
           </Link>
           <Link href='mailto:contact@lavenderwings.com' target='_blank' rel='noopener noreferrer'>
             <Mail className='hover:text-lavender transition-colors duration-300 ease-in-out' />
           </Link>
         </div>
-        <div className='text-sm text-muted-foreground text-center md:text-right'>
-          &copy; {new Date().getFullYear()} Lavender Wings Tattoo. All rights reserved.
+
+        {/* Copyright */}
+        <div className='text-sm text-center md:text-right'>
+          &copy; {new Date().getFullYear()} Brandon Stone Dev. All rights reserved.
         </div>
       </div>
     </footer>

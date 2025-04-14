@@ -51,7 +51,7 @@ export default function ThemeToggle({ className, button = false }: ThemeTogglePr
       <Moon className='text-background w-4 h-4 ml-auto' />
     </button>
   ) : (
-    <button className='p-2 rounded-full transition-colors cursor-pointer' onClick={toggleTheme}>
+    <button className={`rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${isDark ? 'hover:text-yellow-100' : 'hover:text-blue-800/70'}`} onClick={toggleTheme}>
       {isDark ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   )
