@@ -2,8 +2,7 @@ import React from 'react'
 
 import { ExperienceSection } from '../components/ExperienceSection'
 
-
-export const experienceData = [
+const experienceData = [
   {
     title: 'Web3 Mobile Engineer',
     company: 'Boop Industries Inc',
@@ -38,12 +37,12 @@ export default function ExperiencePage() {
         />
       </div>
 
-      {experienceData.map((exp, idx) => (
-        <ExperienceSection key={idx} index={idx}>
-          <h2 className='text-2xl md:text-3xl font-bold mb-2 text-lavender'>{exp.title}</h2>
-          <h3 className='text-lg font-semibold text-muted-foreground'>{exp.company}</h3>
-          <p className='text-sm italic mb-4'>{exp.date}</p>
-          <p className='text-base text-background dark:text-foreground'>{exp.description}</p>
+      {experienceData.map((experience, i) => (
+        <ExperienceSection key={i} index={i}>
+          <h2 className='text-2xl md:text-3xl font-bold mb-2 text-lavender'>{experience.title}</h2>
+          <h3 className='text-lg font-semibold text-muted-foreground'>{experience.company}</h3>
+          <p className='text-sm italic mb-4'>{experience.date}</p>
+          <p className='text-base text-background dark:text-foreground'>{experience.description}</p>
         </ExperienceSection>
       ))}
     </div>

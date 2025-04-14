@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PagProject({ params }: { params: { slug: string } }) {
+export default function ProjectPage() {
   return (
     <div>ProjectPage</div>
   )

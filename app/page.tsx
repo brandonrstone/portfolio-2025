@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import { Banner } from './components/Banner'
-
 /*
   TODO:
     - Home page

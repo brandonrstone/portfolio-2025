@@ -2,7 +2,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Instagram, Twitter, Youtube, Mail, MessageCircleMore, Send, TwitterIcon } from 'lucide-react'
+import { Instagram, Twitter, Youtube, Mail, MessageCircleMore, Send } from 'lucide-react'
 
 export function Footer() {
   return (

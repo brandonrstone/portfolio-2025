@@ -36,7 +36,7 @@ export default function PortfolioPage() {
   return (
     <section id='portfolio' className='min-h-screen px-6 py-20'>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8'>
-        {projects.map(project => <ProjectCard {...project} />)}
+        {projects.map(project => <ProjectCard key={project.id} {...project} />)}
       </div>
     </section>
   )
