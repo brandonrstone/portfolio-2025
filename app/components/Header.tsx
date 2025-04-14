@@ -21,9 +21,9 @@ export function Header() {
       const isScrolled = window.scrollY > 0
 
       if (pathname === '/') {
-        setTextStyleChanges(isScrolled ? 'text-white' : 'text-background')
-        setBackgroundStyleChanges(isScrolled ? '' : 'bg-transparent')
-        setHamburgerStyleChanges(isScrolled ? 'bg-white' : '')
+        setTextStyleChanges(isScrolled ? 'text-background dark:text-foreground' : 'text-background dark:text-foreground')
+        setBackgroundStyleChanges(isScrolled ? 'bg-foreground dark:bg-background shadow-md' : 'bg-transparent')
+        setHamburgerStyleChanges(isScrolled ? 'bg-background dark:bg-foreground' : 'bg-background dark:bg-foreground')
       } else if (pathname === '/portfolio') {
         setTextStyleChanges('text-white')
         setBackgroundStyleChanges(isScrolled ? '/80 backdrop-blur-md' : '')
@@ -62,15 +62,15 @@ export function Header() {
     <header className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ease-in-out text-black ${textStyleChanges}`}>
       <div className={`absolute inset-0 z-[-1] transition-all duration-500 ease-in-out ${backgroundStyleChanges}`} />
       <div className='max-w-6xl mx-auto flex justify-between items-center p-4 py-5 sm:py-4'>
-        <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold' aria-label='Lavender Wings Tattoo Home'>Lavender Wings Tattoo</Link>
-        <nav className='hidden sm:block space-x-4 md:space-x-6 text-sm font-semibold' aria-label='Main navigation'>
+        <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold' aria-label='Lavender Wings Tattoo Home'>Brandon Stone</Link>
+        <nav className='hidden sm:flex items-center space-x-4 md:space-x-6 text-sm font-semibold' aria-label='Main navigation'>
           <Link href='/about' className={`${pathname === '/about' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`} >About</Link>
           <Link href='/portfolio' className={`${pathname === '/portfolio' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`}> Portfolio</Link>
           <Link href='/contact' className={`${pathname === '/contact' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`}> Contact</Link>
+          <ThemeToggle />
         </nav>
 
         <div className='sm:hidden relative flex items-center' ref={menuRef}>
-          <ThemeToggle />
           <Hamburger isOpen={isOpen} hamburgerStyleChanges={hamburgerStyleChanges} toggle={handleToggle} />
           <MobileNavOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>

@@ -1,8 +1,8 @@
-// components/ThemeToggle.tsx
 'use client'
 
 import { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
+import clsx from 'clsx'
 
 export const injectedThemeStatus = `
   (function () {
@@ -20,7 +20,12 @@ export const injectedThemeStatus = `
   })();
 `
 
-export default function ThemeToggle() {
+type ThemeToggleProps = {
+  className?: string
+  button?: boolean
+}
+
+export default function ThemeToggle({ className, button = false }: ThemeToggleProps) {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
@@ -34,8 +39,19 @@ export default function ThemeToggle() {
     setIsDark(isDark)
   }
 
-  return (
-    <button className='p-2 rounded-full hover:bg-gray-200 hover:bg-gray-700 transition-colors cursor-pointer' onClick={toggleTheme}>
+  return button ? (
+    <button className={clsx('relative flex items-center w-14 h-8 rounded-full px-1 cursor-pointer transition-colors duration-300 focus:outline-none', isDark ? 'bg-gray-800' : 'bg-green-300', className)} onClick={toggleTheme} aria-label='Toggle theme'>
+      {/* Sun Icon (left) */}
+      <Sun className='text-yellow-400 w-4 h-4' />
+
+      {/* Sliding dot */}
+      <div className={clsx('absolute left-[0px] w-8 h-8 bg-white rounded-full shadow-md transform transition-transform duration-300', isDark ? 'translate-x-6' : 'translate-x-0')} />
+
+      {/* Moon Icon (right) */}
+      <Moon className='text-background w-4 h-4 ml-auto' />
+    </button>
+  ) : (
+    <button className='p-2 rounded-full transition-colors cursor-pointer' onClick={toggleTheme}>
       {isDark ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   )

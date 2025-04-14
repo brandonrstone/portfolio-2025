@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { BookOpenCheck, CircleUserRound, GalleryHorizontal, Home, X } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 type MobileNavOverlayProps = {
   isOpen: boolean
@@ -43,19 +44,21 @@ export const MobileNavOverlay = ({ isOpen, setIsOpen }: MobileNavOverlayProps) =
       <div className='absolute inset-0 bg-black/50 backdrop-blur-sm' onClick={() => setIsOpen(false)} aria-hidden='true' />
 
       {/* Sidebar */}
-      <div className='relative w-3/4 max-w-sm h-full  text-white p-6 shadow-xl'>
+      <div className='relative w-3/4 max-w-sm h-full p-6 bg-foreground dark:bg-background text:background dark:text-foreground shadow-xl'>
         <button className='absolute top-4 right-4 text-white hover:text-lavender transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
           <X className='w-6 h-6 cursor-pointer' />
         </button>
 
         <nav className='mt-10 space-y-6 text-lg font-medium'>
           <NavItem href='/' onClick={() => setIsOpen(false)} icon={Home} label='Home' />
-          <hr className='border-t border-white' />
+          <NavItemDivider />
           <NavItem href='/about' onClick={() => setIsOpen(false)} icon={CircleUserRound} label='About Me' />
-          <hr className='border-t border-white' />
+          <NavItemDivider />
           <NavItem href='/portfolio' onClick={() => setIsOpen(false)} icon={GalleryHorizontal} label='Portfolio' />
-          <hr className='border-t border-white' />
+          <NavItemDivider />
           <NavItem href='/contact' onClick={() => setIsOpen(false)} icon={BookOpenCheck} label='Contact' />
+          <NavItemDivider />
+          <ThemeToggle className='sm:hidden' button />
         </nav>
       </div>
     </div>
@@ -75,3 +78,5 @@ const NavItem = ({ href, icon: Icon, label, onClick }: NavItemProps) => (
     {label}
   </Link>
 )
+
+const NavItemDivider = () => <hr className='border-t border-background dark:border-foreground' />

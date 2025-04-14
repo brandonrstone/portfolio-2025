@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
-import Head from 'next/head'
-import { Cinzel } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { injectedThemeStatus } from './components/ThemeToggle'
 
-const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] })
+// const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] })
 // const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 // const lato = Lato({ subsets: ['latin'], weight: ['400', '700'] })
 // const fira_sans = Fira_Sans({ subsets: ['latin'], weight: ['400', '700'] })
-// const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] })
+const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] })
 // const quicksand = Quicksand({ subsets: ['latin'], weight: ['400', '700'] })
 // const inter = Inter({ subsets: ['latin'], weight: ['400', '700'] })
 // const space_grotesk = Space_Grotesk({ subsets: ['latin'], weight: ['400', '700'] })
@@ -52,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel='icon' href='/favicon.ico' />
         <script dangerouslySetInnerHTML={{ __html: injectedThemeStatus }} />
       </head>
-      <body className={`${cinzel.className} antialiased text-background dark:text-foreground bg-foreground dark:bg-background`}>
+      <body className={`${montserrat.className} antialiased text-background dark:text-foreground bg-foreground dark:bg-background`}>
         <Header />
         {children}
         <Footer />
