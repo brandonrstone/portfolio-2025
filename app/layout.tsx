@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Brandon Stone Dev',
     description: 'Software Engineer / Web Developer',
-    url: 'https://brandonstone-dev.vercel.app/',
+    url: 'https://brandonstonedev.vercel.app/',
     siteName: 'Brandon Stone.dev',
     images: [
       // Can include multiple images with different sizes for formatting/fallbacks
       {
-        url: 'https://brandonstone-dev.vercel.app/images/haki.png',
+        url: 'https://brandonstonedev.vercel.app/images/haki.png',
         width: 1200,
         height: 630,
         alt: 'Brandon Stone.dev'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Brandon Stone.dev',
     description: 'Software Engineer / Web Developer',
-    images: ['https://brandonstone-dev.vercel.app/images/haki.png']
+    images: ['https://brandonstonedev.vercel.app/images/haki.png']
   }
 }
 
