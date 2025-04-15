@@ -32,11 +32,11 @@ export default function ContactPage() {
   }
 
   return (
-    <section className='min-h-screen flex items-center justify-center px-6 py-24 bg-foreground dark:bg-background'>
+    <section className='min-h-screen flex items-center justify-center px-6 py-24 bg-foreground dark:bg-background transition-colors duration-300 ease-in-out'>
       <div className='max-w-2xl w-full'>
         <h1 className='text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-6 text-center'>Let’s Get in Touch</h1>
 
-        <form className='space-y-3 bg-foreground/80 dark:bg-background/50 p-8 rounded-2xl shadow-xl backdrop-blur' onSubmit={handleSubmit(onSubmit)} aria-labelledby='contact-form-title' noValidate>
+        <form className='space-y-3 bg-foreground/80 dark:bg-background/50 p-8 rounded-2xl shadow-xl dark:shadow-black backdrop-blur' onSubmit={handleSubmit(onSubmit)} aria-labelledby='contact-form-title' noValidate>
           <div>
             <label htmlFor='name' className='block mb-1 text-sm font-medium text-background dark:text-foreground'>
               Name

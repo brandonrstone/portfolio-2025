@@ -51,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel='icon' href='/favicon.ico' />
         <script dangerouslySetInnerHTML={{ __html: injectedThemeStatus }} />
       </head>
-      <body className={`${montserrat.className} antialiased text-background dark:text-foreground bg-foreground dark:bg-background transition-colors duration-300 ease-initial`}>
+      <body className={`${montserrat.className} antialiased text-background dark:text-foreground bg-foreground dark:bg-background transition-colors duration-300 ease-in-out`}>
         <Header />
         <div className='max-w-6xl mx-auto'>
           {children}
