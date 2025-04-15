@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: 'Brandon Stone.dev',
   description: 'Software Engineer / Web Developer',
   openGraph: {
-    title: 'Brandon Stone Dev',
+    title: 'Brandon Stone.dev',
     description: 'Software Engineer / Web Developer',
     url: 'https://brandonstonedev.vercel.app/',
     siteName: 'Brandon Stone.dev',
