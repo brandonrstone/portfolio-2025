@@ -12,6 +12,47 @@ html {
   scroll-behavior: smooth;
 }
 
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 30s ease-in-out infinite;
+}
+
+.dark .animated-gradient {
+  background: linear-gradient(-45deg, #000000 0%, #202020 15%, #4b4b4b 30%, #6b6b6b 45%, #9c9c9c 60%, #c5c5c5 75%, #ffffff 100%);
+  background-size: 400% 400%;
+  animation: gradientBGDark 30s ease-in-out infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientBGDark {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
