@@ -45,14 +45,14 @@ export const MobileNavOverlay = ({ isOpen, setIsOpen }: MobileNavOverlayProps) =
 
       {/* Sidebar */}
       <div className='relative w-3/4 max-w-sm h-full p-6 bg-foreground dark:bg-background text:background dark:text-foreground shadow-xl'>
-        <button className='absolute top-4 right-4 text-background dark:text-foreground hover:text-lavender transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
+        <button className='absolute top-4 right-4 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
           <X className='w-6 h-6 cursor-pointer' />
         </button>
 
         <nav className='mt-10 space-y-6 text-lg font-medium'>
           <NavItem href='/' onClick={() => setIsOpen(false)} icon={Home} label='Home' />
           <NavItemDivider />
-          <NavItem href='/about' onClick={() => setIsOpen(false)} icon={CircleUserRound} label='About Me' />
+          <NavItem href='/about' onClick={() => setIsOpen(false)} icon={CircleUserRound} label='About' />
           <NavItemDivider />
           <NavItem href='/experience' onClick={() => setIsOpen(false)} icon={ChartNoAxesGantt} label='Experience' />
           <NavItemDivider />
@@ -75,7 +75,7 @@ type NavItemProps = {
 }
 
 const NavItem = ({ href, icon: Icon, label, onClick }: NavItemProps) => (
-  <Link href={href} className='flex items-center gap-3 hover:text-lavender transition-colors' onClick={onClick} aria-label={label}>
+  <Link href={href} className='flex items-center gap-3 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors' onClick={onClick} aria-label={label}>
     <Icon className='w-5 h-5' />
     {label}
   </Link>

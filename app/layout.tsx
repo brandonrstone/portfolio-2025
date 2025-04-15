@@ -17,20 +17,20 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] })
 // const flow_circular = Flow_Circular({ subsets: ['latin'], weight: ['400'] })
 
 export const metadata: Metadata = {
-  title: 'Brandon Stone Dev',
+  title: 'Brandon Stone.dev',
   description: 'Software Engineer / Web Developer',
   openGraph: {
     title: 'Brandon Stone Dev',
     description: 'Software Engineer / Web Developer',
     url: 'https://brandonstone-dev.vercel.app/',
-    siteName: 'Lavender Wings Tattoo',
+    siteName: 'Brandon Stone.dev',
     images: [
       // Can include multiple images with different sizes for formatting/fallbacks
       {
-        url: 'https://brandonstone-dev.vercel.app/images/Logo.png',
+        url: 'https://brandonstone-dev.vercel.app/images/haki.png',
         width: 1200,
         height: 630,
-        alt: 'Brandon Stone Dev'
+        alt: 'Brandon Stone.dev'
       },
     ],
     locale: 'en_US',
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Brandon Stone Dev',
+    title: 'Brandon Stone.dev',
     description: 'Software Engineer / Web Developer',
-    images: ['https://brandonstone-dev.vercel.app/images/Logo.png']
+    images: ['https://brandonstone-dev.vercel.app/images/haki.png']
   }
 }
 

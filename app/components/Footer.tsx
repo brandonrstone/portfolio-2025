@@ -10,7 +10,7 @@ export function Footer() {
       <div className='max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6'>
         {/* Branding */}
         <div className='text-center md:text-left'>
-          <h2 className='text-xl font-bold text-background dark:text-foreground'>Brandon Stone Dev</h2>
+          <h2 className='text-xl font-bold text-background dark:text-foreground'>Brandon Stone.dev</h2>
           <p className='text-sm'>Building beautiful, functional web experiences.</p>
         </div>
 
