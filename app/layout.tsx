@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [
       // Can include multiple images with different sizes for formatting/fallbacks
       {
-        url: 'https://brandonstonedev.vercel.app/images/haki.png',
+        url: 'https://brandonstonedev.vercel.app/images/OpenGraphImage.png',
         width: 1200,
         height: 630,
         alt: 'Brandon Stone.dev'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Brandon Stone.dev',
     description: 'Software Engineer / Web Developer',
-    images: ['https://brandonstonedev.vercel.app/images/haki.png']
+    images: ['https://brandonstonedev.vercel.app/images/OpenGraphImage.png']
   }
 }
 
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel='icon' href='/favicon.ico' />
         <script dangerouslySetInnerHTML={{ __html: injectedThemeStatus }} />
       </head>
-      <body className={`${montserrat.className} antialiased text-background dark:text-foreground bg-foreground dark:bg-background`}>
+      <body className={`${montserrat.className} antialiased text-background dark:text-foreground bg-foreground dark:bg-background transition-colors duration-300 ease-initial`}>
         <Header />
         <div className='max-w-6xl mx-auto'>
           {children}

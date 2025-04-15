@@ -6,7 +6,7 @@ import { Instagram, Twitter, Youtube, Mail, MessageCircleMore, Send } from 'luci
 
 export function Footer() {
   return (
-    <footer className='w-full border-t py-10 text-muted-foreground'>
+    <footer className='w-full border-t py-10 text-muted-background dark:text-foreground bg-foreground dark:bg-background z-50'>
       <div className='max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6'>
         {/* Branding */}
         <div className='text-center md:text-left'>
@@ -38,7 +38,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className='text-sm text-center md:text-right'>
-          &copy; {new Date().getFullYear()} Brandon Stone Dev. All rights reserved.
+          &copy; {new Date().getFullYear()} Brandon Stone.dev.
         </div>
       </div>
     </footer>

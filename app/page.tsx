@@ -19,7 +19,7 @@ export default function Home() {
           <div className='flex justify-center items-center text-white z-20'>
             <div className='text-background dark:text-foreground text-center p-4'>
               <h1 className='text-2xl'>Brandon Stone</h1>
-              <p>Front End Engineer</p>
+              <p>Engineer / Web Developer</p>
             </div>
           </div>
         </AnimatedGradientBackground>

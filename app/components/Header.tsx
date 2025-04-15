@@ -22,15 +22,15 @@ export function Header() {
 
       if (pathname === '/') {
         setTextStyleChanges(isScrolled ? 'text-background dark:text-foreground' : 'text-background dark:text-foreground')
-        setBackgroundStyleChanges(isScrolled ? 'bg-foreground/30 dark:bg-background/70 backdrop-blur-md' : 'bg-transparent')
+        setBackgroundStyleChanges(isScrolled ? 'bg-foreground/30 dark:bg-background/70 backdrop-blur-[10px]' : 'bg-transparent')
         setHamburgerStyleChanges(isScrolled ? 'bg-background dark:bg-foreground' : 'bg-background dark:bg-foreground')
       } else if (pathname === '/portfolio') {
         setTextStyleChanges('text-background dark:text-foreground')
-        setBackgroundStyleChanges(isScrolled ? 'bg-foreground/30 dark:bg-background/70 backdrop-blur-md' : 'bg-transparent')
+        setBackgroundStyleChanges(isScrolled ? 'bg-foreground/30 dark:bg-background/70 backdrop-blur-[10px]' : 'bg-transparent')
         setHamburgerStyleChanges('bg-background dark:bg-foreground')
       } else if (pathname === '/experience') {
         setTextStyleChanges('text-background dark:text-foreground')
-        setBackgroundStyleChanges(isScrolled ? 'bg-foreground/30 dark:bg-background/70 backdrop-blur-md' : 'bg-transparent')
+        setBackgroundStyleChanges(isScrolled ? 'bg-foreground/30 dark:bg-background/70 backdrop-blur-[10px]' : 'bg-transparent')
         setHamburgerStyleChanges('bg-background dark:bg-foreground')
       } else {
         setTextStyleChanges('text-background dark:text-foreground')
@@ -62,16 +62,32 @@ export function Header() {
     setIsOpen(prev => !prev)
   }
 
+  const navLinks = [
+    { href: '/about', label: 'About' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/contact', label: 'Contact' }
+  ]
+
   return (
     <header className={`fixed top-0 left-0 w-full p-2 transition-colors duration-300 ease-in-out text-black z-50 ${textStyleChanges}`}>
       <div className={`absolute inset-0 z-[-1] transition-all duration-500 ease-in-out ${backgroundStyleChanges}`} />
       <div className='max-w-6xl mx-auto flex justify-between items-center p-4 py-5 sm:py-4'>
         <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold' aria-label='Lavender Wings Tattoo Home'>Brandon Stone.dev</Link>
-        <nav className='hidden sm:flex items-center space-x-4 md:space-x-6 text-sm' aria-label='Main navigation'>
-          <Link href='/about' className={`${pathname === '/about' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`}>About</Link>
-          <Link href='/experience' className={`${pathname === '/experience' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`}>Experience</Link>
-          <Link href='/portfolio' className={`${pathname === '/portfolio' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`}> Portfolio</Link>
-          <Link href='/contact' className={`${pathname === '/contact' ? 'text-lavender' : 'sm:hover:text-lavender hover:transition-colors hover:duration-300 ease-in-out'}`}> Contact</Link>
+        <nav className='hidden sm:flex items-center space-x-4 md:space-x-6 text-sm' aria-label='Main navigation' >
+          {navLinks.map(({ href, label }) => {
+            const isActive = pathname === href
+
+            return (
+              <Link key={href} href={href}
+                className={`relative inline-block pb-1 transition-colors duration-300 ${isActive ? 'text-background dark:text-foreground' : 'text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70'}`}>
+                <span className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:rounded-full after:bg-background dark:after:bg-foreground after:transition-all after:duration-300 ${isActive ? 'after:w-full' : 'after:w-0 hover:after:w-full'}`}>
+                  {label}
+                </span>
+              </Link>
+            )
+          })}
+
           <ThemeToggle />
         </nav>
 
