@@ -18,23 +18,23 @@ export default function AboutPage() {
         {/* Text Content */}
         <div>
           <h1 className='text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-4'>
-            Well hello! I'm Brandon
+            Well hello! I&apos;m Brandon
           </h1>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I'm a passionate software engineer & web developer focused on building dynamic, performant, and intuitive user experiences. To me, the web is a canvas — and I enjoy shaping clean, maintainable code into meaningful interfaces.
+            I&apos;m a passionate software engineer & web developer focused on building dynamic, performant, and intuitive user experiences. To me, the web is a canvas — and I enjoy shaping clean, maintainable code into meaningful interfaces.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I specialize in modern JavaScript ecosystems like React, Next.js, and TypeScript. Whether I’m crafting a responsive layout, optimizing performance, or designing a reusable component system, I care deeply about getting the details right.
+            I specialize in modern JavaScript ecosystems like React, Next.js, and TypeScript. Whether I&apos;m crafting a responsive layout, optimizing performance, or designing a reusable component system, I care deeply about getting the details right.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I’m also curious about the full stack: from REST APIs and datalgs to deployment pipelines and infrastructure. That curiosity fuels my drive to understand how everything fits together, and how to make apps that scale with both users and teams.
+            I&apos;m also curious about the full stack: from REST APIs and datalgs to deployment pipelines and infrastructure. That curiosity fuels my drive to understand how everything fits together, and how to make apps that scale with both users and teams.
           </p>
 
           <p className='text-lg text-background dark:text-foreground'>
-            When I'm not trying tirelessly to keep my skills sharp with the ever-evolving world of the web I'm usually cooking, writing songs on guitar, or practicing dance moves... where no one can see me of course.
+            When I&apos;m not trying tirelessly to keep my skills sharp with the ever-evolving world of the web I&apos;m usually cooking, writing songs on guitar, or practicing dance moves... where no one can see me of course.
           </p>
         </div>
       </div>
