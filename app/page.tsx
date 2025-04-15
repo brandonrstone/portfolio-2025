@@ -25,7 +25,7 @@ export default function Home() {
         </AnimatedGradientBackground>
 
         {/* Second Section */}
-        <section className='min-h-screen bg-foreground dark:bg-background flex items-center justify-center'>
+        <section className='min-h-screen bg-foreground dark:bg-background flex items-center justify-center transition-colors duration-300 ease-in-out'>
           <div className='text-white'>Second Section Content</div>
         </section>
       </main>
