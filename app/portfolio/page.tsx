@@ -15,7 +15,7 @@ export default function PortfolioPage() {
 }
 
 const ProjectCard = (project: Project) => (
-  <article className='group bg-foreground dark:bg-black/30 rounded-lg shadow-lg overflow-hidden hover:shadow-background/40 dark:hover:shadow-foreground/20 hover:shadow-lg transition duration-300 ease-in-out' aria-labelledby={`project-${project.id}-title`}>
+  <article className='group bg-foreground dark:bg-black/30 rounded-lg shadow-lg overflow-hidden hover:shadow-background/40 dark:hover:shadow-foreground/20 hover:shadow-md transition duration-300 ease-in-out' aria-labelledby={`project-${project.id}-title`}>
     <Link key={project.id} href={`/portfolio/${project.title}`} className='group rounded-lg shadow-lg overflow-hidden transition'>
       {project.video ? (
         <video className='w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300 ease-in-out' autoPlay loop muted playsInline role='img' aria-label={`${project.title} preview video`}>
