@@ -41,18 +41,16 @@ export default function ThemeToggle({ className, button = false }: ThemeTogglePr
 
   return button ? (
     <button className={clsx('relative flex items-center w-14 h-8 rounded-full px-1 cursor-pointer transition-colors duration-300 focus:outline-none', isDark ? 'bg-gray-800' : 'bg-green-300', className)} onClick={toggleTheme} aria-label='Toggle theme'>
-      {/* Sun Icon (left) */}
       <Sun className='text-yellow-400 w-4 h-4' />
 
       {/* Sliding dot */}
       <div className={clsx('absolute left-[0px] w-8 h-8 bg-white rounded-full shadow-md transform transition-transform duration-300', isDark ? 'translate-x-6' : 'translate-x-0')} />
 
-      {/* Moon Icon (right) */}
       <Moon className='text-background w-4 h-4 ml-auto' />
     </button>
   ) : (
     <button className={`rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${isDark ? 'hover:text-yellow-100' : 'hover:text-blue-800/70'}`} onClick={toggleTheme}>
-      {isDark ? <Sun size={20} /> : <Moon size={20} />}
+      {isDark ? <Sun size={20} className='transform-translate -translate-y-0.5' /> : <Moon size={20} className='transform-translate -translate-y-0.5' />}
     </button>
   )
 }

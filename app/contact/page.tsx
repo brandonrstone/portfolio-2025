@@ -4,12 +4,10 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-import { ContactForm, contactSchema } from '../data/schemas'
+import { ContactForm, contactSchema } from '../utils/schemas'
 
 export default function ContactPage() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactForm>({
-    resolver: zodResolver(contactSchema),
-  })
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactForm>({ resolver: zodResolver(contactSchema) })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const onSubmit = async (data: ContactForm) => {
@@ -18,7 +16,7 @@ export default function ContactPage() {
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     })
 
     const result = await response.json()
@@ -88,25 +86,12 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <button
-            className='w-full py-2 px-4 rounded-lg bg-green-500/70 dark:bg-green-600/70 hover:bg-green-500/60 dark:hover:bg-green-500/50 text-white font-semibold dark:focus:ring-foreground/90 transition duration-300 cursor-pointer'
-            type='submit'
-            disabled={status === 'sending'}
-            aria-busy={status === 'sending'}
-          >
+          <button className='w-full py-2 px-4 rounded-lg bg-green-500/70 dark:bg-green-600/70 hover:bg-green-500/60 dark:hover:bg-green-500/50 text-white font-semibold dark:focus:ring-foreground/90 transition duration-300 cursor-pointer' type='submit' disabled={status === 'sending'} aria-busy={status === 'sending'} >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
 
-          {status === 'sent' && (
-            <p className='text-green-600 text-sm text-center' role='status'>
-              Your message has been sent!
-            </p>
-          )}
-          {status === 'error' && (
-            <p className='text-red-600 text-sm text-center' role='alert'>
-              Something went wrong. Try again later.
-            </p>
-          )}
+          {status === 'sent' && <p className='text-green-500 text-sm text-center' role='status'>Your message has been sent!</p>}
+          {status === 'error' && <p className='text-red-600 text-sm text-center' role='alert'>Something went wrong. Try again later.</p>}
         </form>
       </div>
     </section>

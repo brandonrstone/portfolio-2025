@@ -1,36 +1,52 @@
 export type Project = {
-  id: number
+  id: string
   title: string
   description: string
   image: string
   video?: string
+  year: number
+  projectLink: string
+  codeLink?: string
 }
+
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: '1',
     title: 'Boop',
     description: 'A web app built using React and Next.js. It allows users to manage tasks and projects.',
     image: '/images/BoopLogo.png',
+    year: 2024,
+    projectLink: '',
+    codeLink: ''
   },
   {
-    id: 2,
+    id: '2',
     title: 'Messenger App',
-    description: 'An interactive dashboard built with D3.js to visualize real-time data from various sources.',
-    image: '/images/BoopLogo.png',
+    description: 'My take on a chat app; built with Vite & Firebase.',
+    year: 2025,
+    image: '/images/Chat.png',
+    projectLink: 'https://chatroom-app-peach.vercel.app/',
+    codeLink: 'https://github.com/brandonrstone/Chat-App'
   },
   {
-    id: 3,
+    id: '3',
     title: 'Diablo II Stat Checker',
     description: 'App used for checking item stats in the game Diablo II.',
     image: '/images/DiabloIIStatChecker.webm',
-    video: '/images/DiabloIIStatChecker.webm'
+    video: '/images/DiabloIIStatChecker.webm',
+    year: 2022,
+    projectLink: 'https://diablo2rolledstatchecker.vercel.app/',
+    codeLink: 'https://github.com/brandonrstone/diablo2-rolled-stat-checker'
   },
   {
-    id: 4,
+    id: '4',
     title: 'NFTMarketplace',
     description: 'A portfolio website built to showcase projects and technical skills using React and Next.js.',
     image: '/images/NFTMarketplace.webm',
-    video: '/images/NFTMarketplace.webm'
+    video: '/images/NFTMarketplace.webm',
+    year: 2022,
+    projectLink: '',
+    codeLink: ''
   }
 ]

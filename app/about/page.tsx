@@ -7,12 +7,7 @@ export default function AboutPage() {
       <div className='max-w-6xl w-full grid md:grid-cols-[auto_1fr] gap-10 items-start'>
         {/* Profile Image */}
         <div className='flex-shrink-0'>
-          <Image src='/images/portfoliopic.png'
-            alt='Profile picture'
-            width={240}
-            height={240}
-            className='rounded-xl object-cover shadow-lg'
-          />
+          <Image className='rounded-xl object-cover shadow-lg' src='/images/portfoliopic.png' alt='Profile picture' width={240} height={240} />
         </div>
 
         {/* Text Content */}
