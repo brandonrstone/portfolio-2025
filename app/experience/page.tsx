@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ExperienceCard } from '../components/ExperienceCard'
 import { experienceData } from '../data/experience'
+import { ExperienceCard } from '../components/ui/ExperienceCard'
 
 export default function ExperiencePage() {
   return (

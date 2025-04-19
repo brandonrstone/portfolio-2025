@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { BookOpenCheck, ChartNoAxesGantt, CircleUserRound, CodeXml, Home, X } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
+import { ThemeToggle } from '../ui/ThemeToggle'
 
 type MobileNavOverlayProps = {
   isOpen: boolean
@@ -44,7 +44,7 @@ export const MobileNavOverlay = ({ isOpen, setIsOpen }: MobileNavOverlayProps) =
       <div className='absolute inset-0 bg-black/50 backdrop-blur-sm' onClick={() => setIsOpen(false)} aria-hidden='true' />
 
       {/* Sidebar */}
-      <div className='relative w-3/4 max-w-sm h-full p-6 bg-foreground dark:bg-background text:background dark:text-foreground shadow-xl transition-colors duration-300 ease-in-out'>
+      <div className='relative w-3/4 max-w-sm h-full p-6 bg-foreground dark:bg-background text:background dark:text-foreground shadow-xl transition-colors duration-700 ease-in-out'>
         <button className='absolute top-4 right-4 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
           <X className='w-6 h-6 cursor-pointer' />
         </button>

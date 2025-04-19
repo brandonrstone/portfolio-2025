@@ -25,7 +25,7 @@ type ThemeToggleProps = {
   button?: boolean
 }
 
-export default function ThemeToggle({ className, button = false }: ThemeToggleProps) {
+export function ThemeToggle({ className, button = false }: ThemeToggleProps) {
   const [isDark, setIsDark] = useState(false)
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function ThemeToggle({ className, button = false }: ThemeTogglePr
   }
 
   return button ? (
-    <button className={clsx('relative flex items-center w-14 h-8 rounded-full px-1 cursor-pointer transition-colors duration-300 focus:outline-none', isDark ? 'bg-gray-800' : 'bg-green-300', className)} onClick={toggleTheme} aria-label='Toggle theme'>
+    <button className={clsx('relative flex items-center w-14 h-8 rounded-full px-1 cursor-pointer transition-colors duration-700 ease-in-out focus:outline-none', isDark ? 'bg-gray-800' : 'bg-green-300', className)} onClick={toggleTheme} aria-label='Toggle theme'>
       <Sun className='text-yellow-400 w-4 h-4' />
 
       {/* Sliding dot */}
@@ -49,7 +49,7 @@ export default function ThemeToggle({ className, button = false }: ThemeTogglePr
       <Moon className='text-background w-4 h-4 ml-auto' />
     </button>
   ) : (
-    <button className={`rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${isDark ? 'hover:text-yellow-100' : 'hover:text-blue-800/70'}`} onClick={toggleTheme}>
+    <button className={`rounded-full cursor-pointer transition-colors duration-700 ease-in-out ${isDark ? 'hover:text-yellow-100' : 'hover:text-blue-800/70'}`} onClick={toggleTheme}>
       {isDark ? <Sun size={20} className='transform-translate -translate-y-0.5' /> : <Moon size={20} className='transform-translate -translate-y-0.5' />}
     </button>
   )

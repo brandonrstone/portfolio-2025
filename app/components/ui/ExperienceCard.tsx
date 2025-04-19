@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import type { ExperienceData } from '../data/experience'
+import { ExperienceData } from '@/app/data/experience'
 
 type Props = {
   index: number

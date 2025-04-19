@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  transition: background-color 700ms ease-in-out, color 700ms ease-in-out;
 }
 
 .animated-gradient {

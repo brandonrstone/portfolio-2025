@@ -1,35 +1,43 @@
-/*
-  TODO:
-    - Home page
-    - Feedback on successful inquiry submission (toast?)
-    - Try to implement a a better mobile nav menu
-*/
+'use client'
 
-import { AnimatedGradientBackground } from './components/AnimatedGradient'
+import { AnimatedGradientBackground } from './components/layout/AnimatedGradient'
+import { ParallaxContainer } from './components/layout/ParallaxContainer'
+import { ParallaxDotField } from './components/layout/ParallaxDotField'
 
 export const dynamic = 'force-static'
 
 export default function Home() {
   return (
     <div className='flex flex-col min-h-screen scrollbar-hidden'>
-      <main className='flex-1 flex flex-col'>
+      <main className='flex flex-col flex-1'>
         {/* Hero */}
         <AnimatedGradientBackground>
-          {/* <Image src='/images/mountains.jpg' className='absolute inset-0 z-0' alt='Tattoo Hero Image' layout='fill' objectFit='cover' quality={100} /> */}
-          <div className='flex justify-center items-center text-white z-20'>
+          <section className='flex justify-center items-center text-white z-20'>
             <div className='text-background dark:text-foreground text-center p-4'>
               <h1 className='text-2xl'>Brandon Stone</h1>
               <p>Engineer / Web Developer</p>
             </div>
-          </div>
+          </section>
         </AnimatedGradientBackground>
 
-        {/* Second Section */}
-        <section className='min-h-screen bg-foreground dark:bg-background flex items-center justify-center transition-colors duration-300 ease-in-out'>
-          <div className='text-white'>Second Section Content</div>
+        <div className='relative w-screen left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] z-10'>
+          <section className='min-h-[125vh] flex justify-center items-center overflow-hidden bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>
+            <div className='absolute inset-0 overflow-hidden z-0'>
+              <ParallaxDotField dotCount={75} />
+            </div>
+
+            <ParallaxContainer speed={0.3}>
+              <div className='px-4 text-background dark:text-foreground text-4xl text-center transition-transform -translate-y-40 z-10'>
+                Second Section Content
+              </div>
+            </ParallaxContainer>
+          </section>
+        </div>
+
+        <section className='min-h-screen flex justify-center items-center text-background dark:text-foreground bg-foreground dark:bg-background transition-colors duration-700 ease-in-out z-20'>
+          Third Section Content
         </section>
       </main>
     </div>
-  );
+  )
 }
-

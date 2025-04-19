@@ -4,8 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
-import { MobileNavOverlay } from './MobileNavOverlay'
-import ThemeToggle from './ThemeToggle'
+import { ThemeToggle } from './ThemeToggle'
+import { MobileNavOverlay } from '../layout/MobileNavOverlay'
+
 
 export function Header() {
   const pathname = usePathname()
@@ -70,7 +71,7 @@ export function Header() {
   ]
 
   return (
-    <header className={`fixed top-0 left-0 w-full p-2 transition-colors duration-300 ease-in-out text-black z-50 ${textStyleChanges}`}>
+    <header className={`fixed top-0 left-0 w-full p-2  z-50 ${textStyleChanges}`}>
       <div className={`absolute inset-0 z-[-1] transition-all duration-500 ease-in-out ${backgroundStyleChanges}`} />
       <div className='max-w-6xl mx-auto flex justify-between items-center p-4 py-5 sm:py-4'>
         <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold' aria-label='Lavender Wings Tattoo Home'>Brandon Stone.dev</Link>
@@ -80,7 +81,7 @@ export function Header() {
 
             return (
               <Link key={href} href={href}
-                className={`relative inline-block pb-1 transition-colors duration-300 ${isActive ? 'text-background dark:text-foreground' : 'text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70'}`}>
+                className={`relative inline-block pb-1 transition-colors duration-700 ease-in-out ${isActive ? 'text-background dark:text-foreground' : 'text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70'}`}>
                 <span className={`after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:rounded-full after:bg-background dark:after:bg-foreground after:transition-all after:duration-300 ${isActive ? 'after:w-full' : 'after:w-0 hover:after:w-full'}`}>
                   {label}
                 </span>
