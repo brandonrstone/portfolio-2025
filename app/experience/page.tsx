@@ -4,6 +4,7 @@ import { experienceData } from '../data/experience'
 import { ExperienceCard } from '../components/ui/ExperienceCard'
 
 export default function ExperiencePage() {
+
   return (
     <div className='relative'>
       {/* Full-page fixed background with gradient */}

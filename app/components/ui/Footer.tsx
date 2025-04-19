@@ -14,7 +14,7 @@ export function Footer() {
 
         {/* Social Icons */}
         <nav aria-label='Social links'>
-          <ul className='flex gap-6 text-foreground'>
+          <ul className='flex gap-6 text-background dark:text-foreground'>
             <li>
               <Link href='https://instagram.com/brandonrstone' target='_blank' rel='noopener noreferrer' aria-label='Instagram'>
                 <Instagram className='hover:text-pink-500 transition-colors duration-700 ease-in-out' />

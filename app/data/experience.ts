@@ -15,7 +15,7 @@ export const experienceData: ExperienceData[] = [
     points: [
       'Built core product focusing on international remittances with TypeScript, React Native, & Node.js',
       'Worked with founding engineer to build wallet custody and token swapping model using @solana/web3.js',
-      'Owned the development process of KYC onboarding and user authentication',
+      'Implemented KYC onboarding and user authentication',
       'Integrated vendor REST APIs for crypto/fiat on-ramp and oﬀ-ramp'
     ]
   },
@@ -26,9 +26,9 @@ export const experienceData: ExperienceData[] = [
     description: 'Contracted for the migration and launch of the Moonwell.fi dApp',
     points: [
       'Shipped web pages and features to production with Next.js',
+      'Fine-tuned rendering strategies for site on a per-page basis (SSG, SSR) while maximizing SEO',
       'Rapidly constructed TypeScript component library for critical user journeys',
-      'Queried and formatted JSON-RPC data with GraphQL',
-      'Enhanced site with static and server rendering while upholding SEO standards'
+      'Queried and formatted JSON-RPC data with GraphQL'
     ]
   },
   {
@@ -44,9 +44,14 @@ export const experienceData: ExperienceData[] = [
     ]
   },
   {
-    title: 'Intern Developer',
-    company: 'Buildify',
+    title: 'Software Engineer Intern',
+    company: 'Sensible United, LLC',
     date: '2018 - 2019',
-    description: 'Supported the team in prototyping components and building dashboards.',
+    description: 'Apprenticed in a small fintech startup building geographical price tooling',
+    points: [
+      'Contributed to frontend geographic location tooling using React Native',
+      'Maintained and fascilitated the retrieval of credit card-specific savings data from MongoDB ',
+      'Set up backend API routes to handle payload data with Express'
+    ]
   }
 ]

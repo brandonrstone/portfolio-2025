@@ -12,7 +12,7 @@ export default function Home() {
       <main className='flex flex-col flex-1'>
         {/* Hero */}
         <AnimatedGradientBackground>
-          <section className='flex justify-center items-center text-white z-20'>
+          <section className='flex justify-center items-center text-background dark:text-foreground z-20'>
             <div className='text-background dark:text-foreground text-center p-4'>
               <h1 className='text-2xl'>Brandon Stone</h1>
               <p>Engineer / Web Developer</p>

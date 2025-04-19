@@ -17,11 +17,11 @@ export default function AboutPage() {
           </h1>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I&apos;m a passionate software engineer & web developer focused on building dynamic, performant, and intuitive user experiences. To me, the web is a canvas — and I enjoy shaping clean, maintainable code into meaningful interfaces.
+            I&apos;m a Software Engineer & Web Developer passionate about building dynamic, performant, and intuitive user experiences. To me, the web is a canvas — and I enjoy shaping clean, maintainable code into meaningful interfaces.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I specialize in modern JavaScript ecosystems like React, Next.js, and TypeScript. Whether I&apos;m crafting a responsive layout, optimizing performance, or designing a reusable component system, I care deeply about getting the details right.
+            I specialize in modern JavaScript ecosystems like React, Next.js, and TypeScript. These days I love designing beautiful components to fit a brand&apos;s style, handling APIs efficiently and securely, and getting a site wired to maximize SEO.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </p>
 
           <p className='text-lg text-background dark:text-foreground'>
-            When I&apos;m not trying tirelessly to keep my skills sharp with the ever-evolving world of the web I&apos;m usually cooking, writing songs on guitar, or practicing dance moves... where no one can see me of course.
+            When I&apos;m not trying (often times too hard) to keep my skills sharp with the ever-evolving world of the web I&apos;m usually cooking, writing songs on guitar, or practicing dance moves... where no one can see me of course.
           </p>
         </div>
       </div>

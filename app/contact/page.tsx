@@ -30,13 +30,20 @@ export default function ContactPage() {
   }
 
   return (
-    <section className='min-h-screen flex items-center justify-center px-6 py-24 bg-foreground dark:bg-background transition-colors duration-300 ease-in-out'>
-      <div className='max-w-2xl w-full'>
-        <h1 className='text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-6 text-center'>Let’s Get in Touch</h1>
+    <section className='min-h-screen flex items-center justify-center px-6 py-24 text-background dark:text-foreground'>
+      <div className='max-w-xl w-full'>
+        <div>
+          <h1 className='mb-6 text-3xl md:text-4xl font-bold text-center text-background dark:text-foreground'>Let’s Get in Touch</h1>
+        </div>
 
-        <form className='space-y-3 bg-foreground/80 dark:bg-background/50 p-8 rounded-2xl shadow-xl dark:shadow-black backdrop-blur' onSubmit={handleSubmit(onSubmit)} aria-labelledby='contact-form-title' noValidate>
+        <form
+          className='space-y-6 p-8 rounded-xl backdrop-blur-sm bg-background/30 dark:bg-foreground/5'
+          onSubmit={handleSubmit(onSubmit)}
+          aria-labelledby='contact-form-title'
+          noValidate
+        >
           <div>
-            <label htmlFor='name' className='block mb-1 text-sm font-medium text-background dark:text-foreground'>
+            <label htmlFor='name' className='block mb-2 text-sm font-medium'>
               Name
             </label>
             <input
@@ -45,7 +52,7 @@ export default function ContactPage() {
               {...register('name')}
               aria-invalid={!!errors.name}
               aria-describedby='name-error'
-              className='w-full px-4 py-2 rounded-lg bg-foreground dark:bg-background/70 border border-zinc-200 dark:border-zinc-700 text-background dark:text-foreground focus:outline-none focus:ring-2 focus:ring-background dark:focus:ring-foreground'
+              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400'
             />
             <div className='h-4 mt-1' id='name-error'>
               {errors.name && <p className='text-red-500 text-sm'>{errors.name.message}</p>}
@@ -53,7 +60,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label htmlFor='email' className='block mb-1 text-sm font-medium text-background dark:text-foreground'>
+            <label htmlFor='email' className='block mb-2 text-sm font-medium'>
               Email
             </label>
             <input
@@ -62,7 +69,7 @@ export default function ContactPage() {
               {...register('email')}
               aria-invalid={!!errors.email}
               aria-describedby='email-error'
-              className='w-full px-4 py-2 rounded-lg bg-foreground dark:bg-background/70 border border-zinc-200 dark:border-zinc-700 text-background dark:text-foreground focus:outline-none focus:ring-2 focus:ring-background dark:focus:ring-foreground'
+              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400'
             />
             <div className='h-4 mt-1' id='email-error'>
               {errors.email && <p className='text-red-500 text-sm'>{errors.email.message}</p>}
@@ -70,7 +77,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <label htmlFor='message' className='block mb-1 text-sm font-medium text-background dark:text-foreground'>
+            <label htmlFor='message' className='block mb-2 text-sm font-medium'>
               Message
             </label>
             <textarea
@@ -79,14 +86,19 @@ export default function ContactPage() {
               {...register('message')}
               aria-invalid={!!errors.message}
               aria-describedby='message-error'
-              className='w-full px-4 py-2 rounded-lg bg-foreground dark:bg-background/70 border border-zinc-200 dark:border-zinc-700 text-background dark:text-foreground focus:outline-none focus:ring-2 focus:ring-background dark:focus:ring-foreground resize-none'
+              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none'
             />
             <div className='h-4 mt-1' id='message-error'>
               {errors.message && <p className='text-red-500 text-sm'>{errors.message.message}</p>}
             </div>
           </div>
 
-          <button className='w-full py-2 px-4 rounded-lg bg-green-500/70 dark:bg-green-600/70 hover:bg-green-500/60 dark:hover:bg-green-500/50 text-white font-semibold dark:focus:ring-foreground/90 transition duration-300 cursor-pointer' type='submit' disabled={status === 'sending'} aria-busy={status === 'sending'} >
+          <button
+            className='w-full py-3 px-4 rounded-lg bg-gradient-to-r from-pink-400 to-red-500 hover:from-pink-500 hover:to-red-600 text-foreground font-semibold focus:ring-2 focus:ring-pink-300 cursor-pointer transition-all duration-300 ease-in-out'
+            type='submit'
+            disabled={status === 'sending'}
+            aria-busy={status === 'sending'}
+          >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
 
@@ -94,6 +106,6 @@ export default function ContactPage() {
           {status === 'error' && <p className='text-red-600 text-sm text-center' role='alert'>Something went wrong. Try again later.</p>}
         </form>
       </div>
-    </section>
+    </section >
   )
 }
