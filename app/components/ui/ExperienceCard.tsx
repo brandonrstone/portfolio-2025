@@ -1,8 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ExperienceData } from '@/app/data/experience'
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+import { ExperienceData } from '@/app/data/experience'
 
 type Props = {
   index: number
@@ -43,10 +45,24 @@ export const ExperienceCard = ({ index, experience }: Props) => {
   }, [experience.points])
 
   return (
-    <section className='min-h-screen flex items-center justify-center relative overflow-hidden'>
-      <motion.div className={`max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto px-6 py-8 rounded-2xl bg-white/80 dark:bg-black/50 shadow-xl transition-all ${isEven ? 'ml-auto text-left' : 'mr-auto text-right'}`} initial={{ opacity: 0, x: isEven ? -100 : 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }} viewport={{ once: true }}>
+    <section className='relative min-h-screen flex justify-center items-center overflow-hidden'>
+      <motion.div
+        className={`relative max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto px-6 py-8 rounded-2xl bg-foreground/80 dark:bg-black/50 shadow-xl overflow-hidden transition-all ${isEven ? 'ml-auto text-left' : 'mr-auto text-right'}`}
+        initial={{ opacity: 0, x: isEven ? -100 : 100 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }} viewport={{ once: true }}>
         <h2 className='text-2xl md:text-3xl font-bold mb-2 text-lavender'>{experience.title}</h2>
         <h3 className='text-lg font-semibold text-muted-foreground'>{experience.company}</h3>
+        {experience.image && (
+          <div className={`absolute -top-4 ${experience.imageStyles} z-10`}>
+            <Image
+              className={`object-contain grayscale filter drop-shadow opacity-15 ${experience.imageStyles}`}
+              src={experience.image}
+              alt={`${experience.company}`}
+              width={160}
+              height={160}
+            />
+          </div>
+        )}
+
         <p className='text-sm mb-4'>{experience.date}</p>
         <p className='text-base text-background dark:text-foreground mb-4'>{experience.description}</p>
 

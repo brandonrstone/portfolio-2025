@@ -9,13 +9,12 @@ export type Project = {
   codeLink?: string
 }
 
-
 export const projects: Project[] = [
   {
     id: '1',
     title: 'Boop',
     description: 'A web app built using React and Next.js. It allows users to manage tasks and projects.',
-    image: '/images/BoopLogo.png',
+    image: '/images/Boop-Logo.png',
     year: 2024,
     projectLink: '',
     codeLink: ''

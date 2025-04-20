@@ -6,6 +6,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 
 import { ContactForm, contactSchema } from '../utils/schemas'
 
+import { SquareDecorationBackground } from '../components/ui/SquareDecorationBackground'
+
 export default function ContactPage() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactForm>({ resolver: zodResolver(contactSchema) })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
@@ -31,6 +33,7 @@ export default function ContactPage() {
 
   return (
     <section className='min-h-screen flex items-center justify-center px-6 py-24 text-background dark:text-foreground'>
+      <SquareDecorationBackground />
       <div className='max-w-xl w-full'>
         <div>
           <h1 className='mb-6 text-3xl md:text-4xl font-bold text-center text-background dark:text-foreground'>Let’s Get in Touch</h1>
