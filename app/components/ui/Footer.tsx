@@ -10,7 +10,7 @@ export function Footer() {
     { id: 'github', url: 'https://github.com/brandonrstone', hoverColor: '#6e5494', style: { height: 40, width: 40 } },
     { id: 'linkedin', url: 'https://www.linkedin.com/in/brandon-stone-8a319b163/', network: 'linkedin', hoverColor: '#0072b1', style: { height: 42, width: 42 } },
     { id: 'telegram', url: 'https://t.me/brandonrstone', network: 'telegram', hoverColor: '#229ED9', style: { height: 37.5, width: 37.5 } },
-    { id: 'email', url: '/contact', network: 'email', hoverColor: '#D44638', style: { height: 41, width: 41 } },
+    { id: 'email', url: '/contact', network: 'email', hoverColor: '#D44638', style: { height: 42, width: 42 } },
     { id: 'instagram', url: 'https://instagram.com/brandonrstone', network: 'instagram', hoverColor: '#d62976 ', style: { height: 40, width: 40 } },
     { id: 'x', url: 'https://x.com/@Bstone58585', network: 'x', hoverColor: '#ffffff ', style: { height: 40, width: 40 } },
     { id: 'discord', url: 'https://discord.com/users/brandonrstone', network: 'discord', hoverColor: '#5865F2', style: { height: 40, width: 40 } }
@@ -19,7 +19,7 @@ export function Footer() {
   const ariaLabels: Record<string, string> = {
     github: 'Visit my GitHub profile',
     linkedin: 'Visit my LinkedIn profile',
-    instagram: 'Visit my YouTube channel',
+    instagram: 'Follow me on Instagram',
     discord: 'Join my Discord server',
     telegram: 'Message me on Telegram',
     email: 'Send me an email',
