@@ -15,12 +15,12 @@ export const experienceData: ExperienceData[] = [
     image: '/images/Boop-Logo.png',
     imageStyles: 'top-2 right-2 rounded-md opacity-45',
     date: '2023 - 2024',
-    description: 'Native web3 movile app centered on global peer-to-peer remittances',
+    description: 'Native web3 mobile app centered on global peer-to-peer remittances',
     points: [
       'Built core front end architecture with TypeScript, React Native, & Google Firebase',
-      'Worked with founding engineer to build wallet custody and token swapping model using @solana/web3.js',
+      'Worked with founding engineer to design wallet custody and token swapping models using @solana/web3.js',
       'Implemented KYC onboarding and user authentication',
-      'Integrated vendor REST APIs for crypto/fiat on-ramp and oﬀ-ramp'
+      'Integrated vendor REST APIs for USD/USDC-SOL on-ramp and oﬀ-ramp'
     ]
   },
   {
@@ -43,7 +43,7 @@ export const experienceData: ExperienceData[] = [
     image: '/images/Fidelity-Logo.png',
     imageStyles: '-right-8 md:-right-3',
     date: '2020 - 2023',
-    description: 'Collaborated in an enterprise environment to build infrastructure',
+    description: 'Delivered financial software within enterprise DevOps',
     points: [
       'Performed TypeScript module migrations for production investment infrastructure',
       'Integrated AWS services including EC2, DynamoDB, S3, API Gateway, and Lambda',

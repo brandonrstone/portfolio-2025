@@ -45,7 +45,7 @@ export const MobileNavOverlay = ({ isOpen, setIsOpen }: MobileNavOverlayProps) =
 
       {/* Sidebar */}
       <div className='relative w-3/4 max-w-sm h-full p-6 bg-foreground dark:bg-background text:background dark:text-foreground shadow-xl transition-colors duration-700 ease-in-out'>
-        <button className='absolute top-4 right-4 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors' onClick={() => setIsOpen(false)} aria-label='Close menu' >
+        <button className='absolute top-4 right-4 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors duration-700 ease-in-out' onClick={() => setIsOpen(false)} aria-label='Close menu' >
           <X className='w-6 h-6 cursor-pointer' />
         </button>
 

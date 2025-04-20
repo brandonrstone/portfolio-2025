@@ -72,9 +72,9 @@ export function Header() {
 
   return (
     <header className={`fixed top-0 left-0 w-full p-2  z-50 ${textStyleChanges}`}>
-      <div className={`absolute inset-0 z-[-1] transition-all duration-500 ease-in-out ${backgroundStyleChanges}`} />
+      <div className={`absolute inset-0 z-[-1] transition-colors duration-700 ease-in-out ${backgroundStyleChanges}`} />
       <div className='max-w-6xl mx-auto flex justify-between items-center p-4 py-5 sm:py-4'>
-        <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold' aria-label='Lavender Wings Tattoo Home'>Brandon Stone.dev</Link>
+        <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold transition-colors duration-700 ease-in-out' aria-label='Lavender Wings Tattoo Home'>Brandon Stone.dev</Link>
         <nav className='hidden sm:flex items-center space-x-4 md:space-x-6 text-sm' aria-label='Main navigation' >
           {navLinks.map(({ href, label }) => {
             const isActive = pathname === href

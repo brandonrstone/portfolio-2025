@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AboutPage() {
   return (
-    <section className='min-h-screen flex items-center justify-center px-6 py-24 bg-foreground dark:bg-background transition-colors duration-300 ease-in-out'>
+    <section className='min-h-screen flex items-center justify-center px-6 py-24 bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>
       <div className='max-w-6xl w-full grid md:grid-cols-[auto_1fr] gap-10 items-start'>
         {/* Profile Image */}
         <div className='flex-shrink-0'>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           </p>
 
           <p className='text-lg text-background dark:text-foreground'>
-            When I&apos;m not trying (often times too hard) to keep my skills sharp with the ever-evolving world of the web I&apos;m usually cooking, writing songs on guitar, or practicing dance moves... where no one can see me of course.
+            When I&apos;m not trying tirelessly to keep my skills sharp with the ever-evolving world of the web I&apos;m usually cooking, writing songs on guitar, or practicing dance moves... where no one can see me of course.
           </p>
         </div>
       </div>

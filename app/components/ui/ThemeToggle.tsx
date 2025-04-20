@@ -44,7 +44,7 @@ export function ThemeToggle({ className, button = false }: ThemeToggleProps) {
       <Sun className='text-yellow-400 w-4 h-4' />
 
       {/* Sliding dot */}
-      <div className={clsx('absolute left-[0px] w-8 h-8 bg-white rounded-full shadow-md transform transition-transform duration-300', isDark ? 'translate-x-6' : 'translate-x-0')} />
+      <div className={clsx('absolute left-[0px] w-8 h-8 bg-foreground rounded-full shadow-md transform transition-transform duration-300', isDark ? 'translate-x-6' : 'translate-x-0')} />
 
       <Moon className='text-background w-4 h-4 ml-auto' />
     </button>

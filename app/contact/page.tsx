@@ -35,12 +35,13 @@ export default function ContactPage() {
     <section className='min-h-screen flex items-center justify-center px-6 py-24 text-background dark:text-foreground'>
       <SquareDecorationBackground />
       <div className='max-w-xl w-full'>
-        <div>
-          <h1 className='mb-6 text-3xl md:text-4xl font-bold text-center text-background dark:text-foreground'>Let’s Get in Touch</h1>
+        <div className='mt-2 mb-6'>
+          <h1 className='text-3xl md:text-4xl font-bold text-center text-background dark:text-foreground transition-colors duration-700 ease-in-out'>Let’s Get in Touch</h1>
+          <h2 className='text-background/80 dark:text-foreground/80 text-2xl md:text-3xl text-center font-bold transition-colors duration-700 ease-in-out'>{`<Great projects are co-written />`}</h2>
         </div>
 
         <form
-          className='space-y-6 p-8 rounded-xl backdrop-blur-sm bg-background/30 dark:bg-foreground/5'
+          className='space-y-6 p-8 rounded-xl backdrop-blur-sm bg-background/30 dark:bg-foreground/5 transition-colors duration-700 ease-in-out'
           onSubmit={handleSubmit(onSubmit)}
           aria-labelledby='contact-form-title'
           noValidate
@@ -55,7 +56,7 @@ export default function ContactPage() {
               {...register('name')}
               aria-invalid={!!errors.name}
               aria-describedby='name-error'
-              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400'
+              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-colors duration-700 ease-in-out'
             />
             <div className='h-4 mt-1' id='name-error'>
               {errors.name && <p className='text-red-500 text-sm'>{errors.name.message}</p>}
@@ -72,7 +73,7 @@ export default function ContactPage() {
               {...register('email')}
               aria-invalid={!!errors.email}
               aria-describedby='email-error'
-              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400'
+              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-colors duration-700 ease-in-out'
             />
             <div className='h-4 mt-1' id='email-error'>
               {errors.email && <p className='text-red-500 text-sm'>{errors.email.message}</p>}
@@ -89,7 +90,7 @@ export default function ContactPage() {
               {...register('message')}
               aria-invalid={!!errors.message}
               aria-describedby='message-error'
-              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none'
+              className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none transition-colors duration-700 ease-in-out'
             />
             <div className='h-4 mt-1' id='message-error'>
               {errors.message && <p className='text-red-500 text-sm'>{errors.message.message}</p>}
@@ -97,7 +98,7 @@ export default function ContactPage() {
           </div>
 
           <button
-            className='w-full py-3 px-4 rounded-lg bg-gradient-to-r from-pink-400 to-red-500 hover:from-pink-500 hover:to-red-600 text-foreground font-semibold focus:ring-2 focus:ring-pink-300 cursor-pointer transition-all duration-300 ease-in-out'
+            className='w-full py-3 px-4 rounded-lg bg-gradient-to-r from-pink-400 to-red-500 hover:from-pink-500 hover:to-red-600 text-foreground font-semibold focus:ring-2 focus:ring-pink-300 cursor-pointer transition-all duration-700 ease-in-out'
             type='submit'
             disabled={status === 'sending'}
             aria-busy={status === 'sending'}
