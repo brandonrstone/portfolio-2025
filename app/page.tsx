@@ -1,8 +1,10 @@
 'use client'
 
+import Image from 'next/image'
 import { AnimatedGradientBackground } from './components/layout/AnimatedGradient'
 import { ParallaxContainer } from './components/layout/ParallaxContainer'
 import { ParallaxDotField } from './components/layout/ParallaxDotField'
+import { SkillScrollSection } from './components/layout/SkillScrollSection'
 
 export const dynamic = 'force-static'
 
@@ -34,8 +36,11 @@ export default function Home() {
           </section>
         </div>
 
-        <section className='min-h-screen flex justify-center items-center text-background dark:text-foreground bg-blue-400 dark:bg-background transition-colors duration-700 ease-in-out z-20'>
-          Third Section Content
+        <SkillScrollSection />
+
+        <section className='w-screen min-h-screen relative left-1/2 right-1/2 -mx-[50vw] flex items-center justify-center flex-col text-background dark:text-foreground bg-blue-400 dark:bg-foreground transition-colors duration-700 ease-in-out z-20'>
+          <Image src='/images/Under-Construction.png' alt='Under construction image' width={300} height={300} />
+          <h1 className='text-foreground dark:text-background'>Coming soon...</h1>
         </section>
       </main>
     </div>

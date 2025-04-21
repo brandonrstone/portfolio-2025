@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { SocialIcon } from 'react-social-icons'
+import Link from 'next/link'
 
 export function Footer() {
   const [hoverStates, setHoverStates] = useState<Record<string, boolean>>({})
@@ -30,13 +31,13 @@ export function Footer() {
     <footer className='w-full border-t-[0.5px] py-6 text-background dark:text-foreground bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>
       <div className='max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6'>
         <div className='text-center md:text-left'>
-          <h2 className='text-background dark:text-foreground text-lg font-semibold transition-colors duration-700 ease-in-out'>Brandon Stone.dev</h2>
+          <Link href='/' className='text-background dark:text-foreground text-lg font-semibold transition-colors duration-700 ease-in-out'>Brandon Stone.dev</Link>
           <p className='text-xs text-muted-foreground'>Full-Stack Engineer / Web Developer</p>
         </div>
 
         {/* Social Icons */}
         <nav aria-label='Social links'>
-          <ul className='flex gap-2'>
+          <ul className='flex gap-0 sm:gap-2'>
             {socialLinks.map(({ id, url, network, hoverColor, style }) => (
               <li key={id}>
                 <SocialIcon

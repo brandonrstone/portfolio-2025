@@ -18,10 +18,10 @@ const montserrat = Montserrat({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata: Metadata = {
   title: 'Brandon Stone.dev',
-  description: 'Software Engineer / Web Developer',
+  description: 'Full-Stack Engineer / Web Developer',
   openGraph: {
     title: 'Brandon Stone.dev',
-    description: 'Software Engineer / Web Developer',
+    description: 'Full-Stack Engineer / Web Developer',
     url: 'https://brandonstonedev.vercel.app/',
     siteName: 'Brandon Stone.dev',
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Brandon Stone.dev'
-      },
+      }
     ],
     locale: 'en_US',
     type: 'website'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Brandon Stone.dev',
-    description: 'Software Engineer / Web Developer',
+    description: 'Full-Stack Engineer / Web Developer',
     images: ['https://brandonstonedev.vercel.app/images/OpenGraphImage.png']
   }
 }
