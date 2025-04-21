@@ -15,7 +15,7 @@ export default function Home() {
           <section className='flex justify-center items-center text-background dark:text-foreground z-20'>
             <div className='text-background dark:text-foreground text-center p-4'>
               <h1 className='text-2xl'>Brandon Stone</h1>
-              <p>Engineer / Web Developer</p>
+              <p>Full-Stack Engineer / Web Developer</p>
             </div>
           </section>
         </AnimatedGradientBackground>

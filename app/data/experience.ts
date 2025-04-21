@@ -13,9 +13,9 @@ export const experienceData: ExperienceData[] = [
     title: 'Web3 Mobile Engineer',
     company: 'Boop Industries Inc',
     image: '/images/Boop-Logo.png',
-    imageStyles: 'top-2 right-2 rounded-md opacity-45',
+    imageStyles: '-top-12 -right-6 md:-top-8 md:-right-1  opacity-45',
     date: '2023 - 2024',
-    description: 'Native web3 mobile app centered on global peer-to-peer remittances',
+    description: 'Native web3 mobile startup centered on global peer-to-peer remittances',
     points: [
       'Built core front end architecture with TypeScript, React Native, & Google Firebase',
       'Worked with founding engineer to design wallet custody and token swapping models using @solana/web3.js',
@@ -27,7 +27,7 @@ export const experienceData: ExperienceData[] = [
     title: 'Software Engineer',
     company: 'Moonwell.fi',
     image: '/images/Moonwell-Logo.png',
-    imageStyles: '-top-0 -left-4 md:-left-2 rounded-full',
+    imageStyles: '-top-4 left-0 md:-top-4 md:left-2 rounded-full transform scale-110',
     date: '2023',
     description: 'Contracted for the migration and launch of the Moonwell.fi dApp',
     points: [
