@@ -15,10 +15,10 @@ export default function PortfolioPage() {
 }
 
 const ProjectCard = (project: Project) => (
-  <article className='group bg-foreground dark:bg-black/30 rounded-lg shadow-lg overflow-hidden hover:shadow-background/40 dark:hover:shadow-foreground/20 hover:shadow-md transition-colors duration-700 ease-in-out' aria-labelledby={`project-${project.id}-title`}>
-    <Link key={project.id} href={`/portfolio/${project.title}`} className='group rounded-lg shadow-lg overflow-hidden transition'>
+  <article className='group bg-foreground dark:bg-black/30 rounded-lg shadow-lg overflow-hidden hover:shadow-background/40 dark:hover:shadow-foreground/20 hover:shadow-md transition-colors duration-700 ease-in-out' aria-labelledby={`project-${project.id}-title`} role='region'>
+    <Link key={project.id} href={`/portfolio/${project.title}`} className='group rounded-lg shadow-lg overflow-hidden transition' aria-label={`View ${project.title} project`}>
       {project.video ? (
-        <video className='w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out' autoPlay loop muted playsInline role='img' aria-label={`${project.title} preview video`}>
+        <video className='w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out' autoPlay loop muted playsInline role='img' aria-label={`${project.title} preview video`} >
           <source src={project.video} type='video/webm' />
           Your browser does not support the video tag.
         </video>
@@ -29,11 +29,11 @@ const ProjectCard = (project: Project) => (
       )}
 
       <div className='px-4 pt-4 backdrop-blur-md shadow-inner'>
-        <h3 className='text-xl font-semibold text-background dark:text-foreground transition-colors duration-700 ease-in-out' id={`project-${project.id}-title`}>{project.title}</h3>
+        <h3 className='text-xl font-semibold text-background dark:text-foreground transition-colors duration-700 ease-in-out' id={`project-${project.id}-title`} role='heading' aria-level={2}>{project.title}</h3>
       </div>
       <div className='p-4 pt-0'>
-        <p className='mt-4 text-background dark:text-foreground transition-colors duration-700 ease-in-out'>{project.description}</p>
+        <p className='mt-4 text-background dark:text-foreground transition-colors duration-700 ease-in-out' role='contentinfo'>{project.description}</p>
       </div>
     </Link>
-  </article >
+  </article>
 )
