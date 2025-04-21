@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from 'react'
 import { ThemeToggle } from './ThemeToggle'
 import { MobileNavOverlay } from '../layout/MobileNavOverlay'
 
-
 export function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
@@ -108,8 +107,7 @@ type HamburgerProps = {
 }
 
 const Hamburger = ({ isOpen, hamburgerStyleChanges, toggle }: HamburgerProps) => (
-  <button className='flex flex-col justify-evenly items-center w-6 h-4 cursor-pointer' type='button' aria-label='Toggle navigation menu' aria-controls='mobile-menu' aria-expanded={isOpen} onClick={toggle}>
-    <span className='sr-only select-none'>Toggle navigation menu</span>
+  <button className='flex flex-col justify-evenly items-center w-6 h-4 cursor-pointer' type='button' onClick={toggle} aria-label='Toggle navigation menu' aria-controls='mobile-menu' aria-expanded={isOpen}>
     <div className={`w-full h-0.5 rounded-md transition-all duration-150 ease-in-out select-none ${hamburgerStyleChanges} ${isOpen ? 'rotate-45 translate-y-[0.20rem]' : ''}`} />
     <div className={`w-full h-0.5 rounded-md transition-all duration-150 ease-in-out select-none ${hamburgerStyleChanges} ${isOpen ? '-rotate-45 -translate-y-[0.20rem]' : ''}`} />
   </button>
