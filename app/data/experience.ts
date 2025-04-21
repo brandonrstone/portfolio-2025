@@ -57,10 +57,10 @@ export const experienceData: ExperienceData[] = [
     image: '',
     imageStyles: '',
     date: '2018 - 2019',
-    description: 'Apprenticed in a small fintech startup building geographical price tooling',
+    description: 'Apprenticed contributing to location-based credit card rewards startup',
     points: [
-      'Contributed to frontend geographic location tooling using React Native',
-      'Maintained and fascilitated the retrieval of credit card-specific savings data from MongoDB ',
+      'Shipped frontend React Native code',
+      'Entered, maintained and fascilitated the retrieval of card-specific savings data from MongoDB ',
       'Set up backend API routes to handle payload data with Express'
     ]
   }

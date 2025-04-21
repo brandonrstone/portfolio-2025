@@ -28,12 +28,12 @@ const ProjectCard = (project: Project) => (
         </div>
       )}
 
-      <div className='px-4 pt-4 backdrop-blur-md shadow-inner transition-colors'>
-        <h3 className='text-xl font-semibold text-background dark:text-foreground' id={`project-${project.id}-title`}>{project.title}</h3>
+      <div className='px-4 pt-4 backdrop-blur-md shadow-inner'>
+        <h3 className='text-xl font-semibold text-background dark:text-foreground transition-colors duration-700 ease-in-out' id={`project-${project.id}-title`}>{project.title}</h3>
       </div>
       <div className='p-4 pt-0'>
-        <p className='mt-4 text-background dark:text-foreground'>{project.description}</p>
+        <p className='mt-4 text-background dark:text-foreground transition-colors duration-700 ease-in-out'>{project.description}</p>
       </div>
     </Link>
-  </article>
+  </article >
 )

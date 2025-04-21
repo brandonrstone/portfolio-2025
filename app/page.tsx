@@ -34,7 +34,7 @@ export default function Home() {
           </section>
         </div>
 
-        <section className='min-h-screen flex justify-center items-center text-background dark:text-foreground bg-foreground dark:bg-background transition-colors duration-700 ease-in-out z-20'>
+        <section className='min-h-screen flex justify-center items-center text-background dark:text-foreground bg-blue-400 dark:bg-background transition-colors duration-700 ease-in-out z-20'>
           Third Section Content
         </section>
       </main>

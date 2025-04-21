@@ -114,7 +114,7 @@ function Square({ filled, color, size, top, left, rotate, mouseOffset, sensitivi
   const insideRadius = dist < radius
 
   const distanceFactor = insideRadius ? 1 - dist / radius : 0
-  const offsetStrength = 64
+  const offsetStrength = 32
   const offsetX = mouseOffset.x * offsetStrength * sensitivity * distanceFactor
   const offsetY = mouseOffset.y * offsetStrength * sensitivity * distanceFactor
 
