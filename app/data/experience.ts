@@ -12,7 +12,7 @@ export const experienceData: ExperienceData[] = [
   {
     title: 'Web3 Mobile Engineer',
     company: 'Boop Industries Inc',
-    image: '/images/Boop-Logo.png',
+    image: '/images/Boop-Hand.png',
     imageStyles: '-top-12 -right-6 md:-top-8 md:-right-1  opacity-45',
     date: '2023 - 2024',
     description: 'Native web3 mobile startup centered on global peer-to-peer remittances',
