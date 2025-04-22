@@ -22,7 +22,7 @@ export default function AboutPage() {
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            My experience as of late lies with modern TypeScript ecosystems like React, React Native, Next.js and Vite. I get hyped on working with designers to bring beautiful components to life in order to elevate a brand stylistically, ensuring fluidity across web and mobile media sizes, while neurotically wiring a website to maximize SEO.
+            My experience as of late lies with modern TypeScript ecosystems like React, React Native, Next.js and Vite. I get hyped on working with designers to bring beautiful components to life in order to elevate a brand stylistically, ensuring fluidity across web and mobile media sizes, and neurotically wiring a website to maximize SEO.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
