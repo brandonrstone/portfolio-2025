@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -43,7 +44,7 @@ export default function ContactPage() {
             {'>'}</h2>
         </div>
 
-        <form className='space-y-6 p-8 rounded-xl backdrop-blur-sm bg-background/30 dark:bg-foreground/5 transition-colors duration-700 ease-in-out' onSubmit={handleSubmit(onSubmit)} aria-labelledby='contact-form-title' noValidate>
+        <form className='space-y-6 p-8 rounded-xl backdrop-blur-sm bg-background/30 dark:bg-foreground/5 transition-colors duration-700 ease-in-out' onSubmit={handleSubmit(onSubmit)} aria-labelledby='contact-form-title' data-testid="contact-form" noValidate>
           <div>
             <label htmlFor='name' className='block mb-2 text-sm font-medium'>Name</label>
             <input className='w-full px-4 py-3 text-background dark:text-foreground rounded-lg bg-transparent border border-background/30 dark:border-foreground/40 focus:outline-none focus:ring-2 focus:ring-pink-400 transition-colors duration-700 ease-in-out' id='name' type='text'   {...register('name')} aria-invalid={!!errors.name} aria-describedby='name-error' />
