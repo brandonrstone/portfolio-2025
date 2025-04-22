@@ -6,7 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 
 import { ContactForm, contactSchema } from '../utils/schemas'
 
-import { SquareDecorationBackground } from '../components/ui/SquareDecorationBackground'
+import { SquareDecorationBackground } from '../components/layout/SquareDecorationBackground'
 
 export default function ContactPage() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactForm>({ resolver: zodResolver(contactSchema) })

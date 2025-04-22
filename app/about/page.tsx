@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AboutPage() {
   return (
-    <section className='min-h-screen flex items-center justify-center px-6 py-24 bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>
+    <section className='min-h-screen flex justify-center  items-center  px-6 py-24 bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>
       <div className='max-w-6xl w-full grid md:grid-cols-[auto_1fr] gap-10 items-start'>
         {/* Profile Image */}
         <div className='flex-shrink-0'>
@@ -12,21 +12,21 @@ export default function AboutPage() {
 
         {/* Text Content */}
         <div>
-          <h1 className='flex items-center text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-4'>
-            Well <div className='flex items-center justify-center ml-2 bg-foreground dark:bg-background overflow-hidden transition-colors duration-700 ease-in-out'><span className=' text-3xl md:text-4xl font-extrabold fancy-text' style={{ backgroundImage: "url('/images/Paint.jpg')", }}>Hello</span></div>, I&apos;m Brandon
+          <h1 className='flex flex-col sm:flex-row text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-4'>
+            <div className='flex bg-foreground dark:bg-background overflow-hidden transition-colors duration-700 ease-in-out'>Well<p className='ml-2 text-3xl md:text-4xl font-extrabold fancy-text' style={{ backgroundImage: "url('/images/Paint.jpg')" }}>Hello</p><p className='mr-2'>,</p></div>
+            <div>I&apos;m Brandon</div>
           </h1>
 
-
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I&apos;m a Software Engineer & Web Developer who has become passionate about building dynamic, performant, and intuitive user experiences. It might sound a <span className='italic'>little</span> cliché, but I really love seeing the web as a canvas — and I enjoy shaping clean, maintainable code into the best interfaces I can.
+            I&apos;m a Software Engineer & Web Developer who has become passionate about building dynamic, performant, and intuitive user experiences. It might sound a <span className='italic'>little</span> cliché, but I really love seeing the web as a canvas — and I enjoy shipping clean, maintainable code to deliver the best interfaces I can.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            My experience as of late lies with modern TypeScript ecosystems like React, Next.js. I get hyped on working with designers to bring beautiful components to life in order to fit a brand&apos;s style, ensuring fluidity across web and mobile media sizes, and getting a website neurotically wired to maximize SEO.
+            My experience as of late lies with modern TypeScript ecosystems like React, React Native, Next.js and Vite. I get hyped on working with designers to bring beautiful components to life in order to elevate a brand stylistically, ensuring fluidity across web and mobile media sizes, while neurotically wiring a website to maximize SEO.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            Though I feel I have proper dominion over my realm of the frontend, I strive to ensure things are taken care of on the other side of things. I&apos;ve set up many backends that are secure, scalable, and efficient and these days I have particular interest in the integration of modern ORMs.
+            Though I feel like I have a pretty good grasp in the realm of the frontend, I strive to ensure data is taken care of on the other side of things. I&apos;ve set up many backends and strive to solidify their security, scalability, and seamlessness. These days I have take a particular interest to the integration of modern JavaScript based ORMs.
           </p>
 
           <p className='text-lg text-background dark:text-foreground'>
