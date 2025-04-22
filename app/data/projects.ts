@@ -12,15 +12,6 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Boop',
-    description: 'A web app built using React and Next.js. It allows users to manage tasks and projects.',
-    image: '/images/Boop-Logo.png',
-    year: 2024,
-    projectLink: '',
-    codeLink: ''
-  },
-  {
-    id: '2',
     title: 'Messenger App',
     description: 'My take on a chat app; built with Vite & Firebase.',
     year: 2025,
@@ -29,7 +20,7 @@ export const projects: Project[] = [
     codeLink: 'https://github.com/brandonrstone/Chat-App'
   },
   {
-    id: '3',
+    id: '2',
     title: 'Diablo II Stat Checker',
     description: 'App used for checking item stats in the game Diablo II.',
     image: '/images/DiabloIIStatChecker.webm',
@@ -39,7 +30,7 @@ export const projects: Project[] = [
     codeLink: 'https://github.com/brandonrstone/diablo2-rolled-stat-checker'
   },
   {
-    id: '4',
+    id: '3',
     title: 'NFTMarketplace',
     description: 'A portfolio website built to showcase projects and technical skills using React and Next.js.',
     image: '/images/NFTMarketplace.webm',

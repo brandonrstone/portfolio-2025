@@ -29,6 +29,34 @@ html {
   animation: circleMovement 3s ease-in-out infinite;
 }
 
+.fancy-header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+}
+
+.fancy-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveBg 10s linear infinite;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes moveBg {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
 
 @keyframes gradientBG {
   0% {

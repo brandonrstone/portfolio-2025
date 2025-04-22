@@ -12,20 +12,21 @@ export default function AboutPage() {
 
         {/* Text Content */}
         <div>
-          <h1 className='text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-4'>
-            Well hello! I&apos;m Brandon
+          <h1 className='flex items-center text-3xl md:text-4xl font-bold text-background dark:text-foreground mb-4'>
+            Well <div className='flex items-center justify-center ml-2 bg-foreground dark:bg-background overflow-hidden transition-colors duration-700 ease-in-out'><span className=' text-3xl md:text-4xl font-extrabold fancy-text' style={{ backgroundImage: "url('/images/Paint.jpg')", }}>Hello</span></div>, I&apos;m Brandon
           </h1>
 
+
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I&apos;m a Software Engineer & Web Developer passionate about building dynamic, performant, and intuitive user experiences. To me, the web is a canvas — and I enjoy shaping clean, maintainable code into meaningful interfaces.
+            I&apos;m a Software Engineer & Web Developer who has become passionate about building dynamic, performant, and intuitive user experiences. It might sound a <span className='italic'>little</span> cliché, but I really love seeing the web as a canvas — and I enjoy shaping clean, maintainable code into the best interfaces I can.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I specialize in modern JavaScript ecosystems like React, Next.js, and TypeScript. These days I love designing beautiful components to fit a brand&apos;s style, handling APIs efficiently and securely, and getting a site wired to maximize SEO.
+            My experience as of late lies with modern TypeScript ecosystems like React, Next.js. I get hyped on working with designers to bring beautiful components to life in order to fit a brand&apos;s style, ensuring fluidity across web and mobile media sizes, and getting a website neurotically wired to maximize SEO.
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4'>
-            I&apos;m also curious about the full stack: from REST APIs and datalgs to deployment pipelines and infrastructure. That curiosity fuels my drive to understand how everything fits together, and how to make apps that scale with both users and teams.
+            Though I feel I have proper dominion over my realm of the frontend, I strive to ensure things are taken care of on the other side of things. I&apos;ve set up many backends that are secure, scalable, and efficient and these days I have particular interest in the integration of modern ORMs.
           </p>
 
           <p className='text-lg text-background dark:text-foreground'>

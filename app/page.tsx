@@ -30,7 +30,7 @@ export default function Home() {
 
             <ParallaxContainer speed={0.3}>
               <div className='px-4 text-background dark:text-foreground text-4xl text-center transition-transform -translate-y-40 z-10'>
-                Second Section Content
+                Currently
               </div>
             </ParallaxContainer>
           </section>
