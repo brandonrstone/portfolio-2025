@@ -65,8 +65,8 @@ export const ExperienceCard = ({ index, experience }: Props) => {
           </div>
         )}
 
-        <p className='mb-4 text-sm'>{experience.date}</p>
-        <p className=' mb-4 text-base text-background dark:text-foreground'>{experience.description}</p>
+        <p className='mb-4 text-sm transition-colors duration-700 ease-in-out'>{experience.date}</p>
+        <p className=' mb-4 text-base text-background dark:text-foreground transition-colors duration-700 ease-in-out'>{experience.description}</p>
 
         {experience.points?.length && (
           <div ref={containerRef} className={`relative ${isEven ? 'pl-6' : 'pr-6'}`}>
@@ -74,8 +74,8 @@ export const ExperienceCard = ({ index, experience }: Props) => {
             <div className={`absolute w-px bg-lavender ${isEven ? 'left-2' : 'right-2'}`} style={{ top: lineStyle.top, height: lineStyle.height }} />
             <ul className='space-y-6'>
               {experience.points.map((point, i) => (
-                <li key={i} className={`relative text-sm md:text-base text-background dark:text-foreground ${isEven ? '' : 'text-right'}`} >
-                  <span className={`absolute top-1.75 md:top-2.5 w-[7px] h-[7px] bg-lavender rounded-full ${isEven ? 'left-[-1.18rem]' : 'right-[-1.18rem]'}`} ref={i === 0 ? firstDotRef : i === (experience?.points && experience.points.length - 1) ? lastDotRef : null} />
+                <li key={i} className={`relative text-sm md:text-base text-background dark:text-foreground transition-colors duration-700 ease-in-out ${isEven ? '' : 'text-right'}`} >
+                  <span className={`absolute top-1.75 md:top-2.5 w-[7px] h-[7px] bg-lavender rounded-full transition-colors duration-700 ease-in-out ${isEven ? 'left-[-1.18rem]' : 'right-[-1.18rem]'}`} ref={i === 0 ? firstDotRef : i === (experience?.points && experience.points.length - 1) ? lastDotRef : null} />
                   {point}
                 </li>
               ))}
