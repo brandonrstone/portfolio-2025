@@ -3,6 +3,8 @@ import React from 'react'
 import { experienceData } from '../data/experience'
 import { ExperienceCard } from '../components/ui/ExperienceCard'
 
+export const dynamic = 'force-static'
+
 export default function ExperiencePage() {
 
   return (

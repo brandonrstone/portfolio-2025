@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
+export const dynamic = 'force-static'
+
 export default function AboutPage() {
   return (
     <section className='min-h-screen flex justify-center  items-center  px-6 py-24 bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>

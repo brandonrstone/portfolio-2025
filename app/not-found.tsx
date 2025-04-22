@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+export const dynamic = 'force-static'
+
 export default function NotFound() {
   return (
     <div className='min-h-screen flex flex-col justify-center items-center text-center p-6'>
