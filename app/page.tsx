@@ -43,7 +43,7 @@ export default function Home() {
 
         <section className='w-screen min-h-screen relative left-1/2 right-1/2 -mx-[50vw] flex items-center justify-center flex-col text-background dark:text-foreground bg-blue-400 dark:bg-foreground transition-colors duration-700 ease-in-out z-20'>
           <Image src='/images/Under-Construction.png' alt='Under construction image' width={300} height={300} />
-          <h1 className='text-foreground dark:text-background'>Coming soon...</h1>
+          <h1 className='text-foreground dark:text-background transition-colors duration-700 ease-in-out'>Coming soon...</h1>
         </section>
       </main>
     </div>
