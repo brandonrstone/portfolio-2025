@@ -3,10 +3,12 @@
 import Image from 'next/image'
 import { AnimatedGradientBackground } from './components/layout/AnimatedGradient'
 import { ParallaxContainer } from './components/layout/ParallaxContainer'
-import { ParallaxDotField } from './components/layout/ParallaxDotField'
+import { ParallaxSymbolField } from './components/layout/ParallaxSymbolField'  // Updated import
 import { SkillScrollSection } from './components/layout/SkillScrollSection'
 
 export const dynamic = 'force-static'
+
+// Make a OG photo with the not found one, use the OG dimensions
 
 export default function Home() {
   return (
@@ -25,7 +27,8 @@ export default function Home() {
         <div className='relative w-screen left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] z-10'>
           <section className='min-h-[125vh] flex justify-center items-center overflow-hidden bg-foreground dark:bg-background transition-colors duration-700 ease-in-out'>
             <div className='absolute inset-0 overflow-hidden z-0'>
-              <ParallaxDotField dotCount={75} />
+              {/* Use ParallaxSymbolField instead of ParallaxDotField */}
+              <ParallaxSymbolField symbolCount={75} />
             </div>
 
             <ParallaxContainer speed={0.3}>

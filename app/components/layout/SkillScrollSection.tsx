@@ -16,6 +16,7 @@ export function SkillScrollSection() {
       const rect = section.getBoundingClientRect()
       const windowHeight = window.innerHeight
 
+
       const totalScrollable = rect.height - windowHeight
       const amountScrolled = windowHeight - rect.top
       const scrollProgress = Math.min(Math.max(amountScrolled / totalScrollable, 0), 1)
@@ -31,7 +32,7 @@ export function SkillScrollSection() {
   return (
     <section className='relative h-[300vh] bg-foreground dark:bg-background text-center flex justify-center items-start transition-colors duration-700 ease-in-out' ref={sectionRef}>
       <div className='sticky top-0 h-screen flex flex-col justify-center items-center w-full z-10'>
-        <h1 className='mb-4 text-4xl font-bold'>My favorites:</h1>
+        <h1 className='mb-4 text-4xl font-bold'>I work with:</h1>
         {skills.map((skill, i) => {
           const step = 1 / (skills.length + 4)
           const start = (i + 4) * step
