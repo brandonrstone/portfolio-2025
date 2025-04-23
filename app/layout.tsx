@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     images: [
       // Can include multiple images with different sizes for formatting/fallbacks
       {
-        url: 'https://brandonstonedev.vercel.app/images/OpenGraphImage.png',
+        url: 'https://brandonstonedev.vercel.app/images/OpenGraph_Image.png',
         width: 1200,
         height: 630,
         alt: 'Brandon Stone.dev'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Brandon Stone.dev',
     description: 'Full-Stack Engineer / Web Developer',
-    images: ['https://brandonstonedev.vercel.app/images/OpenGraphImage.png']
+    images: ['https://brandonstonedev.vercel.app/images/OpenGraph_Image.png']
   }
 }
 
