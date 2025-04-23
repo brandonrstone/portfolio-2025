@@ -25,7 +25,7 @@ export const projects: Project[] = [
     id: '2',
     title: 'Moonwell.fi',
     about: "Contributer to the protocol's UI",
-    description: 'Contracted for the migration of the Moonwell.fi DeFi protocol. Shipped web pages and features to production with Next.js and rapidly built TypeScript component library to facilitate critical user journeys.',
+    description: 'Moonwell is a decentralized finance (DeFi) protocol on the Moonbeam and Moonriver networks that allows users to leverage their funds to borrow, lend, and stake while earning rewards in a decentralized environment. I contributed by pushing web pages and features to production with Next.js and helped to rapidly build the TypeScript component library to facilitate critical user journeys. Check them out!',
     image: '/images/Moonwell-Logo-Blue.png',
     year: 2022,
     projectLink: 'https://moonwell.fi/',

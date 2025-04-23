@@ -17,7 +17,7 @@ export default async function ProjectPage(props: { params: Promise<{ title: stri
   }
 
   return (
-    <section className='min-h-screen px-6 py-20'>
+    <section className='min-h-screen px-6 pt-26'>
       <div className='max-w-4xl mx-auto'>
         <div className='mb-8'>
           {project.video ? (
