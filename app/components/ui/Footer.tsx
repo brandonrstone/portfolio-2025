@@ -18,13 +18,13 @@ export function Footer() {
   ]
 
   const ariaLabels: Record<string, string> = {
-    github: 'Visit my GitHub profile',
-    linkedin: 'Visit my LinkedIn profile',
-    instagram: 'Visit my YouTube channel',
-    discord: 'Join my Discord server',
+    github: 'Check out my GitHub',
+    linkedin: 'Connect with me on LinkedIn',
+    instagram: 'Follow me on Instagram',
+    discord: 'Add me on Discord',
     telegram: 'Message me on Telegram',
     email: 'Send me an email',
-    x: 'Send me a tweet'
+    x: 'Tweet me or... X me?'
   }
 
   return (
