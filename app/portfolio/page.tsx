@@ -32,7 +32,7 @@ const ProjectCard = (project: Project) => (
         <h3 className='text-xl font-semibold text-background dark:text-foreground transition-colors duration-700 ease-in-out' id={`project-${project.id}-title`} role='heading' aria-level={2}>{project.title}</h3>
       </div>
       <div className='p-4 pt-0'>
-        <p className='mt-4 text-background dark:text-foreground transition-colors duration-700 ease-in-out' role='contentinfo'>{project.description}</p>
+        <p className='mt-4 text-background dark:text-foreground transition-colors duration-700 ease-in-out' role='contentinfo'>{project.about}</p>
       </div>
     </Link>
   </article>

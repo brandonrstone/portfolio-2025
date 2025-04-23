@@ -1,6 +1,7 @@
 export type Project = {
   id: string
   title: string
+  about: string,
   description: string
   image: string
   video?: string
@@ -12,8 +13,9 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Messenger App',
-    description: 'My take on a chat app; built with Vite & Firebase.',
+    title: 'Chat App',
+    about: 'Simple messaging app',
+    description: 'A messenger built with TypeScript, Vite & Firebase that is made to be an addition to a current project I am working on.',
     year: 2025,
     image: '/images/Chat.png',
     projectLink: 'https://chatroom-app-peach.vercel.app/',
@@ -21,8 +23,19 @@ export const projects: Project[] = [
   },
   {
     id: '2',
+    title: 'Moonwell.fi',
+    about: "Contributer to the protocol's UI",
+    description: 'Contracted for the migration of the Moonwell.fi DeFi protocol. Shipped web pages and features to production with Next.js and rapidly built TypeScript component library to facilitate critical user journeys.',
+    image: '/images/Moonwell-Logo-Blue.png',
+    year: 2022,
+    projectLink: 'https://moonwell.fi/',
+    codeLink: ''
+  },
+  {
+    id: '3',
     title: 'Diablo II Stat Checker',
-    description: 'App used for checking item stats in the game Diablo II.',
+    about: 'Search app for checking item stats in the game Diablo II',
+    description: "I made this app for my freinds & Discord server. It takes inventory of the items in the game Diablo II and returns the possible stats an item can roll, allowing a quick look up when trying to maximize your character's stats inside the game. ⚔️⬆",
     image: '/images/DiabloIIStatChecker.webm',
     video: '/images/DiabloIIStatChecker.webm',
     year: 2022,
@@ -30,13 +43,14 @@ export const projects: Project[] = [
     codeLink: 'https://github.com/brandonrstone/diablo2-rolled-stat-checker'
   },
   {
-    id: '3',
-    title: 'NFTMarketplace',
-    description: 'A portfolio website built to showcase projects and technical skills using React and Next.js.',
+    id: '4',
+    title: 'NFT Marketplace',
+    about: 'An marketplace that allows for NFT trading between Ethereum addresses',
+    description: 'Took an interest in the rise of Cryptocurrency & the web3 industry and wanted to get a better undertstanding how things work under the hood. This project is a JavScript application that used early ethers.js APIs to interact with smart contracts on the Ethereum blockchain. It called code from a Solidity smart contract I built and deployed to the Ethereum Goerli testnet.',
     image: '/images/NFTMarketplace.webm',
     video: '/images/NFTMarketplace.webm',
     year: 2022,
     projectLink: '',
     codeLink: ''
-  }
+  },
 ]
