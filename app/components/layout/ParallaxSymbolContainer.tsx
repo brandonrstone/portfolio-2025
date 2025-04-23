@@ -21,7 +21,7 @@ const generateRandomAnimation = () => {
 
 export const ParallaxSymbolField = ({ symbolCount = 50 }) => {
   const colors = ['#fff', '#FF6B6B', '#6BCB77', '#4D96FF', '#FFD93D', '#E85D75']
-  const symbols = ['&lt;p&gt;', '&lt;div&gt;', '&lt;span&gt;', '&lt;h1&gt;', '&lt;button&gt;']
+  const symbols = ['&lt;p&gt;', '&lt;div&gt;', '&lt;span&gt;', '&lt;h1&gt;', '&lt;button&gt;', '&lt;label&gt;']
 
   const symbolElements = Array.from({ length: symbolCount }).map((_, i) => {
     const size = getRandom(6, 20)

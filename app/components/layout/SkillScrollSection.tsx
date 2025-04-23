@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react'
 
-const skills = ['TypeScript', 'React', 'Next.js', 'HTML', 'CSS', 'Node.js']
+const skills = ['TypeScript', 'React', 'Next.js', 'HTML', 'CSS', '... or something new!']
 
 export function SkillScrollSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
