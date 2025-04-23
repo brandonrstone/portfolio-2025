@@ -46,7 +46,7 @@ export const projects: Project[] = [
     id: '4',
     title: 'NFT Marketplace',
     about: 'An marketplace that allows for NFT trading between Ethereum addresses',
-    description: 'Took an interest in the rise of Cryptocurrency & the web3 industry and wanted to get a better undertstanding how things work under the hood. This project is a JavScript application that used early ethers.js APIs to interact with smart contracts on the Ethereum blockchain. It called code from a Solidity smart contract I built and deployed to the Ethereum Goerli testnet.',
+    description: 'Took an interest in the rise of Cryptocurrency & web3 and wanted to get a better undertstanding how things work under the hood. This project is a JavScript application that used early ethers.js APIs to interact with smart contracts on the Ethereum blockchain. It called code from a Solidity smart contract I built and deployed to the Ethereum Goerli testnet.',
     image: '/images/NFTMarketplace.webm',
     video: '/images/NFTMarketplace.webm',
     year: 2022,
