@@ -6,12 +6,12 @@ import { motion } from 'framer-motion'
 
 import { ExperienceData } from '@/app/data/experience'
 
-type Props = {
+type ExperienceCardProps = {
   index: number
   experience: ExperienceData
 }
 
-export const ExperienceCard = ({ index, experience }: Props) => {
+export const ExperienceCard = ({ index, experience }: ExperienceCardProps) => {
   const [lineStyle, setLineStyle] = useState<{ top: number; height: number }>({ top: 0, height: 0 })
   const firstDotRef = useRef<HTMLSpanElement | null>(null)
   const lastDotRef = useRef<HTMLSpanElement | null>(null)
