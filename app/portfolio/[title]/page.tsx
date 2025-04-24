@@ -32,19 +32,40 @@ export default async function ProjectPage(props: { params: Promise<{ title: stri
         <p className='mt-4 text-background dark:text-foreground transition-colors duration-700 ease-in-out'>{project.description}</p>
 
         <hr className='mt-6 transition-colors duration-700 ease-in-out' />
+
         <div className='flex flex-col items-end justify-end space-y-2 mt-8'>
-          <div className='w-full flex justify-between'>
-            <Link href='/portfolio'>
-              <ChevronLeft className='w-10 h-10 cursor-pointer' />
-            </Link>
-            <a href={project.projectLink} target='_blank' rel='noopener noreferrer' className='w-30 p-2 hover:text-foreground dark:hover:text-background border border-background hover:border-foreground dark:border-foreground dark:hover:border-background hover:bg-background dark:hover:bg-foreground rounded-md transition-colors duration-700 ease-in-out'>
-              View Project
-            </a>
-          </div>
-          {project.codeLink && (
-            <a href={project.codeLink} target='_blank' rel='noopener noreferrer' className='flex justify-center w-30 p-2 hover:text-foreground dark:hover:text-background border border-background hover:border-foreground dark:border-foreground dark:hover:border-background hover:bg-background dark:hover:bg-foreground rounded-md transition-colors duration-700 ease-in-out'>
-              View Code
-            </a>
+          {project.projectLink && project.codeLink ? (
+            <>
+              <div className='w-full flex justify-between'>
+                <Link href='/portfolio'>
+                  <ChevronLeft className='w-10 h-10 cursor-pointer' />
+                </Link>
+                <a href={project.projectLink} target='_blank' rel='noopener noreferrer' className='w-30 p-2 hover:text-foreground dark:hover:text-background border border-background hover:border-foreground dark:border-foreground dark:hover:border-background hover:bg-background dark:hover:bg-foreground rounded-md transition-colors duration-700 ease-in-out'>
+                  View Project
+                </a>
+              </div>
+              <a href={project.codeLink} target='_blank' rel='noopener noreferrer' className='flex justify-center w-30 p-2 hover:text-foreground dark:hover:text-background border border-background hover:border-foreground dark:border-foreground dark:hover:border-background hover:bg-background dark:hover:bg-foreground rounded-md transition-colors duration-700 ease-in-out'>
+                View Code
+              </a>
+            </>
+          ) : project.projectLink && !project.codeLink ? (
+            <div className='w-full flex justify-between'>
+              <Link href='/portfolio'>
+                <ChevronLeft className='w-10 h-10 cursor-pointer' />
+              </Link>
+              <a href={project.projectLink} target='_blank' rel='noopener noreferrer' className='flex justify-center w-30 p-2 hover:text-foreground dark:hover:text-background border border-background hover:border-foreground dark:border-foreground dark:hover:border-background hover:bg-background dark:hover:bg-foreground rounded-md transition-colors duration-700 ease-in-out'>
+                View Project
+              </a>
+            </div>
+          ) : (
+            <div className='w-full flex justify-between'>
+              <Link href='/portfolio'>
+                <ChevronLeft className='w-10 h-10 cursor-pointer' />
+              </Link>
+              <a href={project.codeLink} target='_blank' rel='noopener noreferrer' className='flex justify-center w-30 p-2 hover:text-foreground dark:hover:text-background border border-background hover:border-foreground dark:border-foreground dark:hover:border-background hover:bg-background dark:hover:bg-foreground rounded-md transition-colors duration-700 ease-in-out'>
+                View Code
+              </a>
+            </div>
           )}
         </div>
       </div>

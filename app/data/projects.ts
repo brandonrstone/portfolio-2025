@@ -6,7 +6,7 @@ export type Project = {
   image: string
   video?: string
   year: number
-  projectLink: string
+  projectLink?: string
   codeLink?: string
 }
 
@@ -51,6 +51,6 @@ export const projects: Project[] = [
     video: '/images/NFTMarketplace.webm',
     year: 2022,
     projectLink: '',
-    codeLink: ''
+    codeLink: 'https://github.com/brandonrstone/NFT-Marketplace-dApp'
   },
 ]
