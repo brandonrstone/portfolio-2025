@@ -94,9 +94,7 @@ function Square({ filled, color, size, top, left, rotate, mouseOffset, sensitivi
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setVisible(true)
-    }, 10)
+    const timeout = setTimeout(() => setVisible(true), 10)
 
     return () => clearTimeout(timeout)
   }, [])

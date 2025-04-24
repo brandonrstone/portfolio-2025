@@ -27,7 +27,7 @@ export const experienceData: ExperienceData[] = [
     title: 'Software Engineer',
     company: 'Moonwell.fi',
     image: '/images/Moonwell-Logo.png',
-    imageStyles: '-top-4 left-0 md:-top-4 md:left-2 rounded-full transform scale-110',
+    imageStyles: '-top-4 left-0 md:-top-4 md:left-2 rounded-full brightness-0 dark:brightness-100 transform scale-110',
     date: '2023',
     description: 'Contracted for the migration and launch of the Moonwell.fi dApp',
     points: [
