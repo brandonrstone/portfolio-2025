@@ -28,7 +28,7 @@ export default function AboutPage() {
           </p>
 
           <p className='text-lg text-background dark:text-foreground mb-4 transition-colors duration-700 ease-in-out'>
-            Though I feel like I have a pretty good grasp in the realm of the frontend, I strive to ensure data is taken care of on the other side of things. I&apos;ve set up many backends and strive to solidify their security, scalability, and seamlessness. These days I have take a particular interest to the integration of modern JavaScript based ORMs.
+            Though I feel like I have a pretty good grasp in the realm of the frontend, I strive to ensure data is taken care of on the other side of things. I&apos;ve set up many backends and strive to solidify their security, scalability, and seamlessness. These days I have taken a particular interest to the integration of modern JavaScript based ORMs.
           </p>
 
           <p className='text-lg text-background dark:text-foreground transition-colors duration-700 ease-in-out'>
