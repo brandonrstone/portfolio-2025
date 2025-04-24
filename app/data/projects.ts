@@ -15,7 +15,7 @@ export const projects: Project[] = [
     id: '1',
     title: 'Chat App',
     about: "Messaging app I'm working on",
-    description: 'A messenger built with TypeScript, Vite & Firebase. Working on making it to an addition to a current project I am working on since websocket messaging apps are everywhere nowadays.',
+    description: "Web messenger built with TypeScript, Vite & Firebase. Working on making it an addition to a current project I've been building since websocket messaging apps are everywhere nowadays.",
     year: 2025,
     image: '/images/Chat.png',
     projectLink: 'https://chatroom-app-peach.vercel.app/',
