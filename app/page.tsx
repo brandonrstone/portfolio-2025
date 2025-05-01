@@ -32,7 +32,7 @@ export default function Home() {
             </div>
 
             <ParallaxContainer speed={0.3}>
-              <div className='px-4 text-background dark:text-foreground text-4xl text-center transition-transform -translate-y-40 z-10'>
+              <div className='px-4 text-background dark:text-foreground text-4xl text-center -translate-y-40 z-10 transition-all duration-700 ease-in-out'>
                 I build websites & user interfaces
               </div>
             </ParallaxContainer>

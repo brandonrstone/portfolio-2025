@@ -70,7 +70,7 @@ export function Header() {
   ]
 
   return (
-    <header className={`fixed top-0 left-0 w-full p-2  z-50 ${textStyleChanges}`}>
+    <header className={`fixed top-0 left-0 w-full p-2 z-50 ${textStyleChanges}`}>
       <div className={`absolute inset-0 z-[-1] transition-colors duration-700 ease-in-out ${backgroundStyleChanges}`} />
       <div className='max-w-6xl mx-auto flex justify-between items-center p-4 py-5 sm:py-4'>
         <Link href='/' className='text-sm sm:text-lg md:text-lg font-bold transition-colors duration-700 ease-in-out' aria-label='Lavender Wings Tattoo Home'>Brandon Stone.dev</Link>

@@ -75,10 +75,10 @@ type NavItemProps = {
 }
 
 const NavItem = ({ href, icon: Icon, label, onClick }: NavItemProps) => (
-  <Link href={href} className='flex items-center gap-3 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors' onClick={onClick} aria-label={label}>
+  <Link href={href} className='flex items-center gap-3 text-background dark:text-foreground hover:text-background/70 dark:hover:text-foreground/70 transition-colors duration-700 ease-in-out' onClick={onClick} aria-label={label}>
     <Icon className='w-5 h-5' />
     {label}
   </Link>
 )
 
-const NavItemDivider = () => <hr className='border-t border-background dark:border-foreground' />
+const NavItemDivider = () => <hr className='border-t border-background dark:border-foreground transition-colors duration-700 ease-in-out' />
