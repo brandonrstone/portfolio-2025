@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export async function GET() {
   const baseUrl = 'https://brandonstonedev.vercel.app'
 
-  const portfolioItems = ['Chatt App', 'Moonwell.fi', 'Diablo II Stat Checker', 'NFT Marketplace']
+  const portfolioItems = ['Chat App', 'Moonwell.fi', 'Diablo II Stat Checker', 'NFT Marketplace']
 
   // Map portfolio items to routes
   const routes = portfolioItems.map(slug => `/portfolio/${encodeURIComponent(slug)}`)
