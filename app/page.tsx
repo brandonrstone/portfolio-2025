@@ -17,7 +17,7 @@ export default function Home() {
         {/* Hero */}
         <AnimatedGradientBackground>
           <section className='flex justify-center items-center text-background dark:text-foreground z-20'>
-            <div className='text-background dark:text-foreground text-center p-4'>
+            <div className='p-4 text-background dark:text-foreground text-center transition-colors duration-700 ease-in-out'>
               <h1 className='text-2xl'>Brandon Stone</h1>
               <p>Full-Stack Engineer / Web Developer</p>
             </div>
