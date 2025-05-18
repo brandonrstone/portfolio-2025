@@ -26,22 +26,24 @@ type ThemeToggleProps = {
 }
 
 export function ThemeToggle({ className, button = false }: ThemeToggleProps) {
-  const [, forceRender] = useState(0) // Used to force re-render after toggle
+  const [isDark, setIsDark] = useState<boolean | null>(null)
 
-  // Ensure theme is applied on load
+  // Setup on mount only (client-side)
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     const root = document.documentElement
     const localTheme = localStorage.getItem('theme')
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
-    if (localTheme === 'dark' || (!localTheme && systemPrefersDark)) {
-      root.classList.add('dark')
-    } else {
-      root.classList.remove('dark')
-    }
+    const currentThemeIsDark = localTheme === 'dark' || (!localTheme && systemPrefersDark)
+
+    root.classList.toggle('dark', currentThemeIsDark)
+    setIsDark(currentThemeIsDark)
   }, [])
 
-  const isDark = document.documentElement.classList.contains('dark')
+  // Guard against SSR
+  if (isDark === null || typeof window === 'undefined') return null
 
   const toggleTheme = () => {
     const root = document.documentElement
@@ -49,7 +51,7 @@ export function ThemeToggle({ className, button = false }: ThemeToggleProps) {
 
     root.classList.toggle('dark', nowDark)
     localStorage.setItem('theme', nowDark ? 'dark' : 'light')
-    forceRender(i => i + 1) // force component to re-evaluate `isDark`
+    setIsDark(nowDark)
   }
 
   return button ? (
