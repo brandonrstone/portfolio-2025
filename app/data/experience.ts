@@ -17,7 +17,6 @@ export const experienceData: ExperienceData[] = [
     company: 'Fidelity Investments',
     image: '/images/Fidelity-Logo.png',
     imageStyles: '-left-8 md:-right-3',
-
     date: '2025 - Present',
     description: 'Developing internal service applications supporting high-volume user traffic',
     points: [
