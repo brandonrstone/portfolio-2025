@@ -16,7 +16,7 @@ export const ExperienceCard = ({ index, experience }: ExperienceCardProps) => {
   const firstDotRef = useRef<HTMLSpanElement | null>(null)
   const lastDotRef = useRef<HTMLSpanElement | null>(null)
   const containerRef = useRef<HTMLDivElement | null>(null)
-  const isEven = index % 2 === 0
+  const isEven = index % 2 !== 0
 
   const calculateLine = () => {
     if (!containerRef.current || !firstDotRef.current || !lastDotRef.current) return

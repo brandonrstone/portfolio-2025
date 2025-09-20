@@ -8,7 +8,23 @@ export type ExperienceData = {
   points?: string[]
 }
 
+/*
+*/
+
 export const experienceData: ExperienceData[] = [
+  {
+    title: 'Software Engineer',
+    company: 'Fidelity Investments',
+    image: '/images/Fidelity-Logo.png',
+    imageStyles: '-left-8 md:-right-3',
+
+    date: '2025 - Present',
+    description: 'Developing internal service applications supporting high-volume user traffic',
+    points: [
+      'Enterprise web application development with TypeScript & Angular.js',
+      'Facilitated the migration of legacy codebases to implement modern freatures and best practices',
+    ]
+  },
   {
     title: 'Web3 Mobile Engineer',
     company: 'Boop Industries Inc',

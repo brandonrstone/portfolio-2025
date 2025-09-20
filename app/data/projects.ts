@@ -1,5 +1,5 @@
 export type Project = {
-  id: string
+  id: number
   title: string
   about: string,
   description: string
@@ -12,7 +12,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: '1',
+    id: 1,
     title: 'Chat App',
     about: "Messaging app I'm working on",
     description: "Web messenger built with TypeScript, Vite & Firebase. Working on making it an addition to a current project I've been building since websocket messaging apps are everywhere nowadays.",
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     codeLink: 'https://github.com/brandonrstone/Chat-App'
   },
   {
-    id: '2',
+    id: 2,
     title: 'Moonwell.fi',
     about: "Contributer to the protocol UI",
     description: 'Moonwell is a decentralized finance (DeFi) protocol on the Moonbeam and Moonriver networks that allows users to leverage their funds to borrow, lend, and stake while earning rewards in a decentralized environment. I contributed by pushing web pages and features to production with Next.js and helped to rapidly build the TypeScript component library to facilitate critical user journeys. Check them out!',
@@ -32,18 +32,18 @@ export const projects: Project[] = [
     codeLink: ''
   },
   {
-    id: '3',
+    id: 3,
     title: 'Diablo II Stat Checker',
     about: 'Search app for checking item stats in the game Diablo II',
-    description: "I made this app for my freinds & Discord server. It takes inventory of the items in the game Diablo II and returns the possible stats an item can roll, allowing a quick look up when trying to maximize your character's stats inside the game. ⚔️⬆",
+    description: "I started this app as a small project for my friends & Discord server to use casually, but it's become a staple for us as I've continued adding to it over the years! It takes inventory of the items in the game Diablo II: Resurrected and returns the possible stats an item can roll, allowing a quick look up when trying to maximize your character's stats inside the game. ⚔️⬆",
     image: '/images/DiabloIIStatChecker.webm',
     video: '/images/DiabloIIStatChecker.webm',
     year: 2022,
-    projectLink: 'https://diablo2rolledstatchecker.vercel.app/',
+    projectLink: 'https://diablo2-rolled-stat-checker.vercel.app/',
     codeLink: 'https://github.com/brandonrstone/diablo2-rolled-stat-checker'
   },
   {
-    id: '4',
+    id: 4,
     title: 'NFT Marketplace',
     about: 'An marketplace that allows for NFT trading between Ethereum addresses',
     description: 'Took an interest in the rise of Cryptocurrency & web3 and wanted to get a better undertstanding how things work under the hood. This project is a JavScript application that used early ethers.js APIs to interact with smart contracts on the Ethereum blockchain. It called code from a Solidity smart contract I built and deployed to the Ethereum Goerli testnet.',

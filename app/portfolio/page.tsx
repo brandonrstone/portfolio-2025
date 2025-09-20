@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+
 import { type Project, projects } from '../data/projects'
 
 export default function PortfolioPage() {
